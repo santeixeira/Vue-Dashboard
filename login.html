@@ -1,0 +1,1005 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="cadastro_login.aspx.cs" Inherits="cadastro_login" %>
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head runat="server">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="Content/bootstrap.css" rel="stylesheet" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>    
+    <script src="Scripts/jq/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="Scripts/jq/JQ%20Canto%20Arredondado/jquery.corner.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-3.0.0.min.js" type="text/javascript"></script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    	
+<meta name="adopt-website-id" content="fc108e97-b898-49ab-9a13-c01497a417a6" />
+<script src="//tag.goadopt.io/injector.js?website_code=fc108e97-b898-49ab-9a13-c01497a417a6" class="adopt-injector"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<link href="style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.sj.com.br/assets/site/css/style.css">
+	<link rel="stylesheet" href="https://www.sj.com.br/assets/site/css/libs/rSlider.min.css">
+	<link rel="icon" href="https://www.sj.com.br/assets/site/img/favicon.png" />
+	<meta name="csrf-token" content="vQS5rmrMxeK4GY8iQBdXLagY8mCUnE2plKtRLfSI" />
+
+
+<meta name="description" content="Encontre Imóveis Residenciais e Comerciais para Alugar na SJ Imóveis">
+
+
+<meta property="fb:app_id" content="1936785639884851">
+<meta property="og:site_name" content="SJ Imóveis">
+<meta property="og:title" content="SJ Imóveis - Quem é especialista aluga mais">
+<meta property="og:description" content="Encontre Imóveis Residenciais e Comerciais para Alugar na SJ Imóveis">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.sj.com.br">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://www.sj.com.br/assets/site/img/compartilhamento.jpg">
+
+<meta name="twitter:widgets:csp" content="on">
+<meta name="twitter:title" content="SJ Imóveis - Quem é especialista aluga mais">
+<meta name="twitter:description" content="Encontre Imóveis Residenciais e Comerciais para Alugar na SJ Imóveis">
+	
+	<script>var urlbase = "https://www.sj.com.br";</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+	<script src="https://www.sj.com.br/assets/site/js/busca.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="934625719936-187uslbbveee3r9uic44o32dggcrv6fk.apps.googleusercontent.com">
+	<meta name="facebook-domain-verification" content="b3pu6rzfx1wxyremcsjim8rjh1u4wh" />
+
+
+	<!-- BEGIN GOOGLE ANALYTICS -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-16804633-2', 'auto');
+    ga('send', 'pageview');
+    </script>    
+    <!-- END GOOGLE ANALYTICS -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '1187491087929823'); 
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+        fbq('track', 'Search');
+        fbq('track', 'CompleteRegistration');
+    </script>
+    <noscript>
+         <img height="1" width="1" 
+        src="https://www.facebook.com/tr?id=1187491087929823&ev=PageView
+        &noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Ads: 993325609 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-993325609"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-993325609');
+    </script>
+
+
+    <!-- Start VWO Async Smartcode -->
+    <script type='text/javascript'>
+    window._vwo_code = window._vwo_code || (function(){
+    var account_id=438316,
+    settings_tolerance=2000,
+    library_tolerance=2500,
+    use_existing_jquery=false,
+    is_spa=1,
+    hide_element='body',
+
+    /* DO NOT EDIT BELOW THIS LINE */
+    f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
+    settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
+    </script>
+    <!-- End VWO Async Smartcode -->
+    <style>
+        .sup-novo {
+            height: 17px;
+            width: 54px;
+            border-radius: 5px;
+            background-color: #EA531A;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 12px;
+            color: white;
+            content: attr(data-superscript);
+            vertical-align: super;
+            display: flex;
+            position: relative;
+            padding: 8px 10px;
+        }
+    </style>
+
+    <script>
+    function Formatar(src, mask) {
+    
+        if (event.keyCode > 47 && event.keyCode < 58) 
+        {
+            event.returnValue = true;
+        }    
+        else 
+        {        
+               event.returnValue = false;       
+        }     
+    
+        var i = src.value.length;
+        var saida = mask.substring(0, 1);
+        saida = '#';
+        var texto = mask.substring(i)
+        if (texto.substring(0, 1) != saida)
+        {
+	        src.value += texto.substring(0, 1);
+        }	
+    }
+
+
+    function mascara(o, f) {
+    v_obj = o
+    v_fun = f
+    setTimeout("execmascara()", 1)
+    }
+    function execmascara() {
+        v_obj.value = v_fun(v_obj.value)
+    }
+    function mtel(v) {
+        v = v.replace(/\D/g, "");             //Remove tudo o que não é dígito
+        v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+        v = v.replace(/(\d)(\d{4})$/, "$1.$2");    //Coloca hífen entre o quarto e o quinto dígitos
+        return v;
+    }
+
+    function ValidateCheckboxes() 
+    {
+        var inputElems = document.getElementById("chTermoCompromisso");
+        if (inputElems.type === "checkbox" && inputElems.checked === false)
+        {
+            alert("Por favor, marque o termo de compromisso.");
+            return false;
+        }
+        return true;
+    }
+
+    </script>
+
+    <style>
+        .button_pill {
+            background-color: #FAD51F;
+            border: none;
+            border-radius: 30px;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        .button:hover {
+          background-color: #f1f1f1;
+        }
+        .btn-cad{
+            background:#021C38;
+            border:none;
+            outline:none;
+            display:block;
+            height:42px;
+            width:200px;
+            cursor:pointer;
+            text-align:center;
+            border-bottom: 2px solid;
+            border-bottom-color:#FAD51F;
+        }
+
+        .btn-inv{
+            background:transparent;
+            border:none;
+            outline:none;
+            display:block;
+            height:42px;
+            width:200px;
+            cursor:pointer;
+            text-align:left;
+            color:#000000;
+            font-weight: 600;
+            font-size: 14px;
+            
+        }
+
+        .btn-lupa{
+            background:transparent;
+            background-image: url(Imagens/lupa.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            border:none;
+            outline:none;
+            display:block;
+            height:25px;
+            width:25px;
+            cursor:pointer;
+            text-align:center;
+            color:#FFFFFF;
+        }
+
+        .btn-add{
+            background:transparent;
+            background-image: url(Imagens/mais.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            border:none;
+            outline:none;
+            display:block;
+            height:25px;
+            width:25px;
+            cursor:pointer;
+            text-align:center;
+            color:#FFFFFF;
+        }
+
+        .btn-techway{
+            background:transparent;
+            background-image: url(Imagens/techway_logo.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            border:none;
+            outline:none;
+            display:block;
+            height:19px;
+            width:29px;
+            cursor:pointer;
+            text-align:center;
+            color:#FFFFFF;
+            padding-right: 9px;
+        }
+
+        .img-tres{
+            background-image: url('Imagens/tres_linhas.png'); 
+            background-size:contain;
+            background-repeat: no-repeat;
+            width: 42px; 
+            height: 42px;
+            padding: 42px;
+        }
+        .file-up{
+            background-color: transparent;
+            border: solid 1px;
+            border-radius: 4px;
+            color: #CED4DA;
+            padding: 10px 20px;
+            text-align: left;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0px 2px;
+
+        }
+
+        .img-wpp{
+
+            background-image: url('Imagens/wpp_logo.png'); 
+            background-size:contain;
+            float: left;
+            background-repeat: no-repeat;
+            width: 20px; 
+            height: 20px;
+
+        }
+
+        .btn-trocar {
+            background-color: transparent;
+            border: 1px;
+            border-style: solid;
+            border-color: #1E509F;
+            border-radius: 6px;
+            color: #1e509F;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .btn-trocar:hover{
+            background-color: #1E509F;
+            border: 1px;
+            border-color: #1E509F;
+            border-radius: 6px;
+            color: #ffF;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .txt-resumo{
+            width: 331px;
+            left: 15px;
+            height: 48px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 20px;
+        }
+
+    </style>
+
+    <title>Cadastro</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+       
+        <script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId            : '1936785639884851',
+	      autoLogAppEvents : true,
+	      xfbml            : true,
+	      version          : 'v7.0'
+	    });
+	  };
+	</script>
+
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=1936785639884851&autoLogAppEvents=1" nonce="wqUefvaT"></script>
+	
+	<main class="main" id="main">
+
+	    <h2 class="hideSEO">SJ Imóveis</h2>
+
+					<header class="header-inner" id="header"> 
+	<div class="header-top__box desktop">
+		<div class="container">
+			<div class="header-top">
+				<ul class="header-contato">
+					<li class="header-contato__item">
+						<i class="sprite-whatsapp2"></i>
+						<span>
+							Alugue um imóvel
+							<a href="https://api.whatsapp.com/send?phone=5585996246400" target="_blank"><strong>85 99624-6400</strong></a>
+							<!-- <a href="https://api.whatsapp.com/send?phone=5585996246400" target="_blank"><strong>85 99624-6400</strong></a> -->
+						</span>
+					</li>
+					<li class="header-contato__item">
+						<span>
+							Fortaleza
+							<strong>85 3255-8888</strong>
+						</span>
+					</li>
+					<li class="header-contato__item">
+						<span>
+							Cariri
+							<strong>88 3571-8882</strong>
+						</span>
+					</li>
+					<li class="header-contato__item">
+						<i class="sprite-whatsapp"></i>
+						<span>
+							Traga o seu imóvel para a SJ
+							<a href="https://api.whatsapp.com/send?phone=5585996244300" target="_blank"><strong>85 99624-4300</strong></a>
+						</span>
+					</li>
+				</ul>
+				<ul class="header-links ">
+					<li class="header-links__item">
+						<a href="https://www.sj.com.br/area-restrita">
+							<i class="sprite-key2"></i>
+							<span>Área restrita</span>
+						</a>
+					</li>
+					<li class="header-links__item mobile yellow-box"><a href="https://www.sj.com.br/administramos-seu-imovel" style="color: #02345d;">Traga o seu imóvel para a SJ</a></li>
+
+					<!-- <li class="header-links__item">
+						<div class="notification">
+							<a href="https://www.sj.com.br/favoritos">
+							<i class="sprite-heart2"></i>
+							<span class="num">10</span>
+							</a>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom__box">
+		<div class="container">
+			<figure class="logo">
+				<a href="https://www.sj.com.br"><img src="https://www.sj.com.br/assets/site/img/logo-inner.png" alt="Logo SJ Imóveis"></a>
+			</figure>
+			<div class="header-bottom">
+				<nav class="nav-menu">
+					<ul class="menu">
+						<li class="menu-item menu-height">
+							<a href="javascript:;" class="link">Residencial <i class="arrow down"></i></a>
+							<div class="submenu">
+								<figure class="submenu-fig">
+									<img src="https://www.sj.com.br/assets/site/img/images/bg-menu-2.jpg" alt="Imagem Submenu">
+								</figure>
+								<nav class="submenu-nav">
+									<ul class="submenu-menu">
+										<li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/apartamento/residencial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu-2.jpg">APARTAMENTO</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/casa/residencial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu-2.jpg">CASA</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/kitnet/residencial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu-2.jpg">KITNET</a></li>									</ul>
+								</nav>
+							</div>
+						</li>	
+						<li class="menu-item menu-height">
+							<a href="javascript:;" class="link">Comercial <i class="arrow down"></i></a>
+							<div class="submenu submenu-col-1">
+								<figure class="submenu-fig">
+									<img src="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg" alt="Imagem Submenu">
+								</figure>
+								<nav class="submenu-nav">
+									<ul class="submenu-menu">
+									<li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/sala/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">SALA</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/ponto-comercial/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">PONTO COMERCIAL</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/loja/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">LOJA</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/quiosque/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">QUIOSQUE</a></li></ul><ul class="submenu-menu"><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/casa/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">CASA</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/galpao/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">GALPÃO</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/predio/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">PRÉDIO</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/terreno/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">TERRENO</a></li>								</nav>
+							</div>
+						</li>
+						<li class="menu-item hidden-xs hidden-sm">
+							<a href="https://www.sj.com.br/vitrine">Vitrine</a>
+						</li>
+						<li class="menu-item hidden-xs hidden-sm yellow-box">
+							<a href="https://www.sj.com.br/administramos-seu-imovel" style="color: #02345d;">Traga o seu imóvel para a SJ</a>
+						</li>
+                         <li class="menu-item hidden-xs hidden-sm yellow-box" style="width: 219px; height: 46px; text-align: center"> 
+							<a href="https://www.sj.com.br/administramos-seu-imovel" style="color: #02345d;">Avaliamos o seu imóvel<sup class="sup-novo" style="left: 165px; top: -40px">Novo</sup></a>
+						</li>
+					</ul>
+				</nav>
+				<div class="second-box second-box_main">
+					<div class="menu-retractable">
+						<div class="hamburger" id="menu_retractable">
+							<div class="line one"></div>
+							<div class="line two"></div>
+							<div class="line three"></div>
+						</div>
+						<ul class="menu-retractable__menu">
+							<li class="menu-retractable__menu-item"><a href="https://www.sj.com.br/favoritos" target="_blank">Meus Favoritos</a></li>
+							<li class="menu-retractable__menu-item"><a href="https://blog.sj.com.br/" target="_blank">Blog SJ</a></li>
+							<li class="menu-retractable__menu-item mobile"><a href="https://www.sj.com.br/administramos-seu-imovel">Administramos seu imóvel</a></li>
+							<li class="menu-retractable__menu-item mobile"><a href="https://www.sj.com.br/vitrine">Vitrine</a></li>
+							<li class="menu-retractable__menu-item"><a href="https://www.sj.com.br/guia-regioes">Guia de regiões</a></li>
+							<li class="menu-retractable__menu-item mobile"><a href="https://www.sj.com.br/area-restrita">Área restrita</a></li>
+							<li class="menu-retractable__menu-item"><a href="https://www.sj.com.br/fale-conosco">Fale Conosco</a></li>
+							<li class="menu-retractable__menu-item"><a href="https://www.sj.com.br/trabalhe-conosco">Trabalhe Conosco</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<header class="header-fixed" id="menu_fixed">
+	<div class="header-bottom__box">
+		<div class="container">
+			<figure class="logo">
+				<a href="https://www.sj.com.br"><img src="https://www.sj.com.br/assets/site/img/logo-inner.png" alt="Logo SJ Imóveis"></a>
+			</figure>
+			<div class="header-bottom">
+				<nav class="nav-menu">
+					<ul class="menu">
+						<li class="menu-item menu-height">
+							<a href="javascript:;" class="link">Residencial <i class="arrow down"></i></a>
+							<div class="submenu">
+								<figure class="submenu-fig">
+									<img src="https://www.sj.com.br/assets/site/img/images/bg-menu-2.jpg" alt="Imagem Submenu">
+								</figure>
+								<nav class="submenu-nav">
+									<ul class="submenu-menu">
+									<li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/apartamento/residencial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu-2.jpg">APARTAMENTO</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/casa/residencial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu-2.jpg">CASA</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/kitnet/residencial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu-2.jpg">KITNET</a></li>									</ul>
+								</nav>
+							</div>
+						</li>	
+						<li class="menu-item menu-height">
+							<a href="javascript:;" class="link">Comercial <i class="arrow down"></i></a>
+							<div class="submenu submenu-col-1">
+								<figure class="submenu-fig">
+									<img src="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg" alt="Imagem Submenu">
+								</figure>
+								<nav class="submenu-nav">
+									<ul class="submenu-menu">
+										<li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/sala/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">SALA</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/ponto-comercial/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">PONTO COMERCIAL</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/loja/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">LOJA</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/quiosque/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">QUIOSQUE</a></li></ul><ul class="submenu-menu"><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/casa/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">CASA</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/galpao/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">GALPÃO</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/predio/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">PRÉDIO</a></li><li class="submenu-menu__item"><a href="https://www.sj.com.br/alugar/terreno/comercial" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">TERRENO</a></li>									</ul>
+								</nav>
+							</div>
+						</li>
+						<li class="menu-item hidden-xs hidden-sm">
+							<a href="https://www.sj.com.br/vitrine">Vitrine</a>
+						</li>
+					</ul>
+				</nav>
+				
+				<ul class="header-links">
+					<li class="header-links__item btn-whatsheader hidden-xs hidden-sm">
+						<a href="https://api.whatsapp.com/send?phone=5585996246400" target="_blank">
+							<i class="sprite-whatsappf"></i>
+							<span>Contato por WhatsApp</span>
+						</a>
+					</li>
+					<!-- <li class="header-links__item">
+						<div class="notification">
+							<a href="https://www.sj.com.br/favoritos">
+							<i class="sprite-heart2"></i>
+							<span class="num">10</span>
+							</a>
+						</div>
+					</li> -->
+				</ul>
+					
+				<div class="second-box second-box__fixed">
+					<div class="menu-retractable">
+						<div class="hamburger" id="menu_retractable_fixed">
+							<div class="line one"></div>
+							<div class="line two"></div>
+							<div class="line three"></div>
+						</div>
+						<ul class="menu-retractable__menu">
+							<li class="menu-retractable__menu-item"><a href="https://www.sj.com.br/favoritos" target="_blank">Meus Favoritos</a></li>
+							<li class="menu-retractable__menu-item"><a href="https://blog.sj.com.br/" target="_blank">Blog SJ</a></li>
+							<li class="menu-retractable__menu-item mobile"><a href="https://www.sj.com.br/administramos-seu-imovel">Administramos seu imóvel</a></li>
+							<li class="menu-retractable__menu-item mobile"><a href="https://www.sj.com.br/vitrine">Vitrine</a></li>
+							<li class="menu-retractable__menu-item"><a href="https://www.sj.com.br/guia-regioes">Guia de regiões</a></li>
+							<li class="menu-retractable__menu-item mobile"><a href="https://www.sj.com.br/area-restrita">Área restrita</a></li>
+							<li class="menu-retractable__menu-item"><a href="https://www.sj.com.br/fale-conosco">Fale Conosco</a></li>
+							<li class="menu-retractable__menu-item"><a href="https://www.sj.com.br/trabalhe-conosco">Trabalhe Conosco</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+</header>		
+<asp:Panel ID="pnCadastro" runat="server"  Visible="false">
+    <section class="bg-grayclean">
+
+	    <div class="container">
+		    <div class="breadcrumbs">
+			    <a href="https://www.sj.com.br">SJ Imóveis</a> »
+			    <span class="breadcrumb_last" aria-current="page">Avaliamos seu imóvel</span>
+		    </div>
+	    </div>
+	
+	    <div class="container">
+            <img src="Imagens/Group 4408.png" style="padding-bottom: 35px"/>
+            <h2 style="font-weight: 600; font-size: 19px; padding-bottom: 18px">Dados Cadastrais do Cliente</h2>
+            <div class="row" style="padding-top: 34px">
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label1" runat="server" Text="Cód do Cliente"></asp:Label>
+                    <asp:TextBox ID="txtCodCliente" runat="server" ReadOnly="true" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-4 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label2" runat="server" Text="Nome ou Razão Social"></asp:Label>
+                    <asp:TextBox ID="txtNome" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label3" runat="server" Text="CPF/CNPJ"></asp:Label>
+                    <asp:TextBox ID="txtCPFouCNPJ" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label4" runat="server" Text="E-mail"></asp:Label>
+                    <asp:TextBox ID="txtEmail" runat="server" class="form-control"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 14px">
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label5" runat="server" Text="Telefone"></asp:Label>
+                    <asp:TextBox ID="txtTelefone" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label6" runat="server" Text="Celular"></asp:Label>
+                    <asp:TextBox ID="txtCelular" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label7" runat="server" Text="Cep"></asp:Label>
+                    <asp:TextBox ID="txtCep" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label8" runat="server" Text="E-mail"></asp:Label>
+                    <asp:TextBox ID="TextBox4" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label9" runat="server" Text="Número"></asp:Label>
+                    <asp:TextBox ID="Número" runat="server" class="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 14px">
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label10" runat="server" Text="Complemento"></asp:Label>
+                    <asp:TextBox ID="txtComplemento" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label11" runat="server" Text="Bairro"></asp:Label>
+                    <asp:TextBox ID="txtBairro" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label12" runat="server" Text="Cidade"></asp:Label>
+                    <asp:TextBox ID="txtCidade" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label13" runat="server" Text="Estado"></asp:Label>
+                    <asp:TextBox ID="txtEstado" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="container">
+            <h2 style="font-weight: 600; font-size: 19px; padding-bottom: 18px; padding-top: 76px">Dados Cadastrais do Imóvel</h2>
+            <div class="row">
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <h1 style="font-weight: 500; font-size: 16px; border-bottom: 1px solid; width: 80px">Imóvel 01</h1> 
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12" style="left: 780px">     
+                    <a style="font-weight: 600; font-size: 14px; border-bottom: 1px solid">
+                        <img src="Imagens/cross.png" style="float: left; padding-right: 15px;" />Excluir imóvel</a>     
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 14px">
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label14" runat="server" Text="Cód do imóvel"></asp:Label>
+                    <asp:TextBox ID="txtCodImovel1" runat="server" ReadOnly="true" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-4 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label15" runat="server" Text="IPTU do Imóvel"></asp:Label>
+                    <asp:TextBox ID="txtIPTUImovel1" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label16" runat="server" Text="Matrícula"></asp:Label>
+                    <asp:TextBox ID="txtMatriculaImovel1" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label17" runat="server" Text="Logradouro"></asp:Label>
+                    <asp:TextBox ID="txtLogradouroImovel1" runat="server" class="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 14px">
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label18" runat="server" Text="Número"></asp:Label>
+                    <asp:TextBox ID="txtNumeroImovel1" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label19" runat="server" Text="Complemento"></asp:Label>
+                    <asp:TextBox ID="txtCompImovel1" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label20" runat="server" Text="Bairro"></asp:Label>
+                    <asp:TextBox ID="txtBairroImovel1" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label21" runat="server" Text="Cidade"></asp:Label>
+                    <asp:TextBox ID="txtCidadeImovel1" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label22" runat="server" Text="Estado"></asp:Label>
+                    <asp:TextBox ID="txtEstadoImovel1" runat="server" class="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="row py-4" style="border-bottom: 1px solid #CECFD1 ; padding-bottom: 15px; padding-top: 46px">
+			    <div class="col-12 col-sm-12 col-md-12  text-left ">		   
+                        <asp:Label ID="Label32" runat="server" Text=""></asp:Label>
+                </div>               
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <h1 style="font-weight: 500; font-size: 16px; padding-top: 45px; border-bottom: 1px solid; width: 80px">Imóvel 02</h1> 
+                </div>
+
+                <div class="col-lg-3 col-sm-12 col-md-12" style="left: 780px; padding-top: 45px">     
+                    <a style="font-weight: 600; font-size: 14px; border-bottom: 1px solid">
+                        <img src="Imagens/cross.png" style="float: left; padding-right: 15px;" />Excluir imóvel</a>
+                
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 14px">
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label23" runat="server" Text="Cód do imóvel"></asp:Label>
+                    <asp:TextBox ID="txtCodImovel2" runat="server" ReadOnly="true" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-4 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label24" runat="server" Text="IPTU do Imóvel"></asp:Label>
+                    <asp:TextBox ID="txtIPTUImovel2" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label25" runat="server" Text="Matrícula"></asp:Label>
+                    <asp:TextBox ID="txtMatriculaImovel2" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label26" runat="server" Text="Logradouro"></asp:Label>
+                    <asp:TextBox ID="txtLogradouro" runat="server" class="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 14px">
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label27" runat="server" Text="Número"></asp:Label>
+                    <asp:TextBox ID="txtNumeroImovel2" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label28" runat="server" Text="Complemento"></asp:Label>
+                    <asp:TextBox ID="txtCompImovel2" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label29" runat="server" Text="Bairro"></asp:Label>
+                    <asp:TextBox ID="txtBairroImovel2" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label30" runat="server" Text="Cidade"></asp:Label>
+                    <asp:TextBox ID="txtCidadeImovel2" runat="server" class="form-control"></asp:TextBox>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12 text-left">
+                    <asp:Label ID="Label31" runat="server" Text="Estado"></asp:Label>
+                    <asp:TextBox ID="txtEstadoImovel2" runat="server" class="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 42px;">
+                <div class="col-lg-3 col-sm-12 col-md-12">     
+                    <a style="font-weight: 600; font-size: 14px; border-bottom: 1px solid">
+                        <img src="Imagens/mais.png" style="float: left; padding-right: 15px;" />Adicionar imóvel</a>
+                
+                </div>
+            </div>
+            <div class="row" style="padding-top: 40px;">
+                <div class="col-lg-2 col-sm-12 col-md-12" style="left: 367px">
+                    <asp:Button ID="btSalvarDados" runat="server" class="button-pill" Text="Salvar dados" style="width: 177px; height: 50px; font-size: 16px; font-weight: 600"/>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-md-12" style="left: 367px">
+                    <asp:Button ID="btAlterarDados" runat="server" class="button-pill" Text="Alterar dados" style="width: 177px; height: 50px;
+                    font-size: 16px; font-weight: 600; color: #fff; background-color: #004CA4"/>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</asp:Panel>
+
+<asp:Panel ID="pnPagamento" runat="Server" Visible="true">
+     <section class="bg-grayclean">
+         <div class="container">
+		    <div class="breadcrumbs">
+			    <a href="https://www.sj.com.br">SJ Imóveis</a> »
+			    <span class="breadcrumb_last" aria-current="page">Avaliamos seu imóvel</span>
+		    </div>
+	    </div>
+
+        <div class="container">
+            <img src="Imagens/Group 4408.png" style="padding-bottom: 35px"/>
+            <h2 style="font-weight: 600; font-size: 19px; padding-bottom: 18px">Resumo da compra</h2>
+            <div class="row" style="height: 100px; border-bottom: #E5E5E5 1px solid; border-top: #E5E5E5 1px solid">
+                <h1 class="txt-resumo">Avaliação do seu imóvel com todos os benefícios Readi e SJ Imóveis</h1>
+                <div class="col-lg-1 text-center" style="left: 179px">
+                    <asp:Label ID="Label33" runat="server" Text="Quantidades"></asp:Label>
+                    <asp:TextBox ID="txtUnidades" runat="server" CssClass="form-control" style="border-radius: 10px; width: 79px; height: 34px"/>
+                </div>
+                <div class="col-lg-2 text-center" style="left: 179px">
+                    <asp:Label ID="lblSubTotal" runat="server" Text="Subtotal (x itens)"></asp:Label>
+                    <asp:Label ID="lblValor" runat="server" Text="R$ XX,XX unidade"></asp:Label>
+                </div>
+
+                <div class="col-lg-2 text-center" style="left: 179px">
+                    <asp:Label ID="Label34" runat="server" Text="Valor total" style="font-weight: 600; font-size: 16px"></asp:Label>
+                    <asp:Label ID="txtValorTotal" runat="server" Text="R$XX,XX"
+                        style="font-weight: 800; font-size: 20px"></asp:Label>
+                </div>
+
+            </div>
+        </div>
+
+
+     </section>
+</asp:Panel>
+		<footer class="footer">
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h5 class="h5">Fortaleza</h5>
+					<div class="row">
+												<div class="col-12 col-lg-12 agencia__item">
+							<!-- <span class="ag-title">Agência Central</span> -->
+														<address>
+								Av. Santos Dumont, 1388 | 
+								85 3255-8888
+							</address>
+														<!-- <span class="tel">85 3255-8888</span> -->
+						</div>
+												<div class="col-12 col-lg-12 agencia__item">
+							<!-- <span class="ag-title"></span> -->
+														<!-- <span class="tel"></span> -->
+						</div>
+												<div class="col-12 col-lg-12 agencia__item">
+							<!-- <span class="ag-title"></span> -->
+														<!-- <span class="tel"></span> -->
+						</div>
+											</div>
+				</div>
+				<div class="col-lg-4">
+					<p class="h5">Cariri</p>
+					<div class="row">
+												<div class="col-12 col-lg-12 agencia__item">
+							<!-- <span class="ag-title">Agência Cariri</span> -->
+														<address>
+								Av. Leão Sampaio, 6 - Crajubar | 
+								88 3571-8882
+							</address>
+														<!-- <span class="tel">88 3571-8882</span> -->
+						</div>
+											</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="row">
+						<div class="col-lg-5">
+							<p class="h5"><a href="">Início</a></p>
+						</div>
+						<div class="col-lg-7">
+							<p class="h5">Residencial</p>
+							<ul class="footer-menu">
+								<li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/apartamento/residencial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Apartamento</a></li><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/casa/residencial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Casa</a></li><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/kitnet/residencial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Kitnet</a></li>							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<p class="h5">Comercial</p>
+					<div class="footer-menu-list">
+						<ul class="footer-menu">
+							<li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/sala/comercial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Sala</a></li><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/ponto-comercial/comercial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Ponto comercial</a></li><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/loja/comercial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Loja</a></li><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/quiosque/comercial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Quiosque</a></li><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/casa/comercial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Casa</a></li><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/galpao/comercial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Galpão</a></li></ul><ul class="footer-menu"><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/predio/comercial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Prédio</a></li><li class="footer-menu__item"><a href="https://www.sj.com.br/alugar/terreno/comercial/" data-hover="https://www.sj.com.br/assets/site/img/images/bg-menu.jpg">Terreno</a></li>						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3">
+					<p>
+						<a href="https://www.sj.com.br/vitrine">Vitrine</a>
+					</p>
+					<p>
+						<a href="https://www.sj.com.br/guia-regioes">Guia de regiões</a>
+					</p>
+					<p>
+						<a href="https://www.sj.com.br/administramos-seu-imovel">Administramos seu imóvel</a>
+					</p>
+					<p>
+						<a href="https://www.sj.com.br/uploads/sj_cadastro_inquilino_PF2016JUNHO14.pdf" target="_blank">Ficha de Cadastro de Pessoa Física</a>
+					</p>
+					<p>
+						<a href="https://www.sj.com.br/uploads/sj_cadastro_inquilino_PJ2016JUNHO14.pdf" target="_blank">Ficha de Cadastro de Pessoa Jurídica</a>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p>
+						<a href="https://blog.sj.com.br/" target="_blank">Blog SJ</a>
+					</p>
+					<p>
+						<a href="https://www.sj.com.br/fale-conosco">Fale Conosco</a>
+					</p>
+					<p>
+						<a href="https://www.sj.com.br/trabalhe-conosco">Trabalhe Conosco</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copy">
+		<div class="container">
+			<div class="social">
+				<ul class="list-social">
+					<li class="list-social__item">
+						<a href="https://www.facebook.com/sjadmdeimoveis/?fref=ts" target="_blank">
+							<i class="sprite-face"></i>
+						</a>
+					</li>
+					<li class="list-social__item">
+						<a href="https://www.instagram.com/sjimoveis/" target="_blank"> 
+							<i class="sprite-insta"></i>
+						</a>
+					</li>
+					<li class="list-social__item">
+						<a href="https://web.whatsapp.com/send?phone=5585996246400" target="_blank">
+							<i class="sprite-whatsappf"></i>
+						</a>
+					</li>
+					<li class="list-social__item">
+						<span>Alugue pelo Whatsapp</span>
+						<a href="https://web.whatsapp.com/send?phone=5585996246400" target="_blank">85 99624-6400</a>
+					</li>
+				</ul>
+			</div>
+			<div class="copy">
+				<p>©2010-2022	 - Todos os Direitos Reservados - SJ Imóveis - sj.com.br</p>
+				<div class="logo-carbono">
+					<a href="https://carbono.digital/" target="_blank"><img src="https://www.sj.com.br/assets/site/img/logo-carbono.png" alt="Carbono"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>	</main>
+
+	<div class="overflowLocalidades"></div>
+	
+		<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script type="text/javascript" src="https://www.sj.com.br/assets/site/js/jquery.autocomplete.js"></script>
+    	
+			
+		<script src="https://www.sj.com.br/assets/site/js/jquery.maskedinput.js"></script>
+	<script src="https://www.sj.com.br/assets/site/js/facebook.js"></script>
+	<script src="https://www.sj.com.br/assets/site/js/maps.js"></script>
+	<script src="https://www.sj.com.br/assets/site/js/rSlider.min.js"></script>
+	<script src="https://www.sj.com.br/assets/site/js/plugins.js"></script>
+	
+	<script>
+		/*
+		* Mask CNPJ and CPF
+		*/
+		$("input[id*='cpfcnpj']").inputmask({
+			mask: ['999.999.999-99', '99.999.999/9999-99'],
+			keepStatic: true
+		});
+
+		/*
+		* Mask phone
+		*/
+		$('[name="telefone"]')
+		.mask("(99) 9999-9999?9")
+		.focusout(function (event) {  
+		    var target, phone, element;  
+		    target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+		    phone = target.value.replace(/\D/g, '');
+		    element = $(target);  
+		    element.unmask();  
+		    if(phone.length > 10) {  
+		        element.mask("(99) 99999-999?9");
+		    } else {  
+		        element.mask("(99) 9999-9999?9");
+		    }
+		});
+	</script>
+	
+	<script src="https://www.sj.com.br/assets/site/js/main.js"></script>
+	<script src="https://www.sj.com.br/assets/site/js/ajax.js"></script>
+	
+
+    </form>
+</body>
+</html>
