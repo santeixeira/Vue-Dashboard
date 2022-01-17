@@ -5,39 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar Nested</title>
+    <link href="style.css" rel="stylesheet"></style>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kmlpandey77/bootnavbar/css/bootnavbar.css">
-    <style>
-        @media (min-width: 992px){
-            .dropdown-menu .dropdown-toggle:after{
-                border-top: .3em solid transparent;
-                border-right: 0;
-                border-bottom: .3em solid transparent;
-                border-left: .3em solid;
-            }
-            .dropdown-menu .dropdown-menu{
-                margin-left:0; margin-right: 0;
-            }
-            .dropdown-menu li{
-                position: relative;
-            }
-            .nav-item .submenu{ 
-                display: none;
-                position: absolute;
-                left:100%; top:-7px;
-            }
-            .nav-item .submenu-left{ 
-                right:100%; left:auto;
-            }
-            .dropdown-menu > li:hover{ background-color: #f1f1f1 }
-            .dropdown-menu > li:hover > .submenu{
-                display: block;
-            }
-        }
-    </style>
+    
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
             <span class="navbar-toggler-icon"></span>
@@ -75,33 +48,35 @@
         
         </div> <!-- navbar-collapse.// -->
         </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 text-left">
+                <label>CEP: <input type="text" id="txtCep"></label>
+            </div>
+            <div class="col-lg-3 text-left">
+                <label>Cidade: <input type="text" id="txtCidade"></label>
+            </div>
+            <div class="col-lg-3 text-left">
+                <label>Estado: <input type="text" id="txtEstado"></label>
+            </div>
+            <div class="col-lg-3 text-left">
+                <label>Rua: <input type="text" id="txtRua"></label>
+            </div>
+            
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>    
+        <label>Complemento: <input type="text" id="txtComplemento"></label>
+        <label>Celular: <input type="text" id="txtCelular"></label>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>    
+    <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <script src="js/bootnavbar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
-    <script>
-        
-        // Prevent closing from click inside dropdown
-        $(document).on('click', '.dropdown-menu', function (e) {
-        e.stopPropagation();
-        });
 
-        // make it as accordion for smaller screens
-        if ($(window).width() < 992) {
-        $('.dropdown-menu a').click(function(e){
-            e.preventDefault();
-            if($(this).next('.submenu').length){
-                $(this).next('.submenu').toggle();
-            }
-            $('.dropdown').on('hide.bs.dropdown', function () {
-            $(this).find('.submenu').hide();
-        })
-        });
-        }
-    </script>
+
 </body>
 </html>
