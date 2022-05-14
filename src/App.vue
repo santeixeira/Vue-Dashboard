@@ -1,27 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <main class="columns is-gapless is-multiline">
+    <div class="column is-1">
+      <SideBar />
+    </div>
+    <div class="column is-11">
+      <DashBoard />
+    </div>
+  </main>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import { defineComponent } from "vue";
+import SideBar from "./components/Sidebar/SideBar.vue";
+import DashBoard from "./components/Dashboard/DashBoard.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
+    SideBar,
+    DashBoard
+},
 });
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.google.com/specimen/Bebas+Neue');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: rgb(240, 240, 240);
+}
+
+html{
+  font-family: 'Poppins', sans-serif;
+}
+
+.diminish {
+  width: 4em;
+}
+
+.augmentated {
+  width: 95%;
 }
 </style>
