@@ -1,0 +1,41 @@
+#app {
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  --bg-primary: rgb(240, 240, 240);
+  --txt-primary: #111;
+
+  header {
+    --bg-secondary: linear-gradient(82deg, rgb(158, 158, 158) 0%, #eee 70%);
+    --txt-secondary: #111;
+  }
+}
+
+main.dark-mode {
+  --bg-primary: #051c27;
+  --txt-primary: #eee;
+
+  header.dark-mode {
+    --bg-secondary: linear-gradient(82deg, rgb(4, 52, 80) 0%, #051c27 70%);
+    --txt-secondary: #eee;
+  }
+}
+
+.content-primary{
+  background-color: var(--bg-primary);
+  color: var(--txt-primary)
+}
+
+.content-secondary{
+  background-color: var(--bg-secondary);
+  color: var(--txt-secondary)
+}

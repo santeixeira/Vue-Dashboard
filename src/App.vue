@@ -1,12 +1,19 @@
 <template>
-  <main class="columns is-gapless is-multiline">
-    <div class="column is-1">
-      <SideBar />
+  <Transition>
+    <main
+    class="columns is-gapless is-multiline"
+    :class="{ 'dark-mode': darkMode }"
+    
+  >
+    <div class="column is-2 content-secondary">
+      <SideBar @alteredTheme="altTheme" />
     </div>
-    <div class="column is-11">
-      <DashBoard />
+    <div class="column is-10 content-primary">
+      <DashBoard @alteredTheme="altTheme" />
     </div>
   </main>
+  </Transition>
+  
 </template>
 
 <script lang="ts">
@@ -18,32 +25,23 @@ export default defineComponent({
   name: "App",
   components: {
     SideBar,
-    DashBoard
-},
+    DashBoard,
+  },
+  data() {
+    return {
+      darkMode: false,
+    };
+  },
+  methods: {
+    altTheme(darkMode: boolean) {
+      this.darkMode = darkMode;
+    },
+  },
 });
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url('https://fonts.google.com/specimen/Bebas+Neue');
-#app {
-  font-family: Poppins, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: rgb(240, 240, 240);
-}
-
-html{
-  font-family: 'Poppins', sans-serif;
-}
-
-.diminish {
-  width: 4em;
-}
-
-.augmentated {
-  width: 95%;
-}
+@import url("https://fonts.google.com/specimen/Bebas+Neue");
+@import url("./App.scss");
 </style>

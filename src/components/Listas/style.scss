@@ -1,9 +1,17 @@
-#form-post {
-  margin-top: 3em;
-}
-
 .box {
   margin: 1em;
+}
+
+.tags {
+  font-weight: 800;
+} 
+
+.button-dots {
+  background: none;
+  display: block;
+  position: relative;
+  border: none;
+  cursor: pointer;
 }
 
 .avatar {
@@ -30,4 +38,11 @@
 #txtNome {
   font-size: 1.15em;
   font-weight: 400;
+}
+
+ul li {
+  display:inline-block;
+  background-color: none;
+  list-style-type: none;
+  margin-right: 10px;
 }

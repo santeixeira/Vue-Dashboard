@@ -5,57 +5,17 @@
   margin-top: 3em;
 }
 
-.box {
-  margin: 1em;
-}
-
-.tag {
-  font-weight: 800
-} 
-
-.button-dots {
-  background: none;
-  display: block;
-  position: relative;
-  border: none;
-  cursor: pointer;
-  background-image: url('');
-}
-
-.avatar {
-  width: 5em;
-  height: 5em;
-  -webkit-border-radius: 50%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 50%;
-  -moz-background-clip: padding;
-  border-radius: 50%;
-  background-clip: padding-box;
-  margin: 0px 0 0 1em;
-  float: left;
+#imgNonData {
+  height: 20em;
+  width: 20em;
   background-size: cover;
   background-position: center center;
   object-fit: cover;
+  margin-top: -1em;
 }
 
-#titulo-candidato {
-  font-size: 1.5em;
-  font-weight: bolder;
-}
-
-#txtNome {
-  font-size: 1.15em;
-  font-weight: 400;
-}
-
-ul li {
-  display:inline-block;
-  background-color: none;
-  list-style-type: none;
-  margin-right: 10px;
-}
-
-img {
-  height: 1.75em;
-  width: 1.75em;
+#txtNonData {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 1em;
 }
