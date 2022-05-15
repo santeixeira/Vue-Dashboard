@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.google.com/specimen/Bebas+Neue');
+
 #app {
   font-family: Poppins, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,12 +33,35 @@ main.dark-mode {
   }
 }
 
-.content-primary{
+#content-primary{
   background-color: var(--bg-primary);
   color: var(--txt-primary)
 }
 
-.content-secondary{
-  background-color: var(--bg-secondary);
-  color: var(--txt-secondary)
+#content-secondary{
+  background-color: #fff;
+  color: var(--txt-secondary);
+  position: relative;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#form-post {
+  margin-top: 3em;
+}
+
+#imgNonData {
+  height: 20em;
+  width: 20em;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  margin-top: -1em;
+}
+
+#txtNonData {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 1em;
 }

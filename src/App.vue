@@ -1,32 +1,26 @@
 <template>
-  <Transition>
-    <main
-    class="columns is-gapless is-multiline"
-    :class="{ 'dark-mode': darkMode }"
-    
-  >
-    <div class="column is-2 content-secondary">
-      <SideBar @alteredTheme="altTheme" />
-    </div>
-    <div class="column is-10 content-primary">
-      <DashBoard @alteredTheme="altTheme" />
+  <main class="container" :class="{ 'dark-mode': darkMode }">
+    <div class="columns is-gapless is-multiline">
+      <div class="column is-3 box" id="content-secondary">
+        <SideBar @alteredTheme="altTheme" />
+      </div>
+      <div class="column is-9" id="content-primary">
+        <router-view/>
+      </div>
     </div>
   </main>
-  </Transition>
-  
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import SideBar from "./components/Sidebar/SideBar.vue";
-import DashBoard from "./components/Dashboard/DashBoard.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     SideBar,
-    DashBoard,
   },
+
   data() {
     return {
       darkMode: false,

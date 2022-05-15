@@ -7,9 +7,27 @@
         id="avatar"
       />
     </h1>
-    <button class="button" @click="alterTheme">
-      {{ txtButton }}
-    </button>
+    <div class="has-text-centered mt-6">
+      <label class="checkbox">
+        <input type="checkbox" @click="alterTheme" />
+        {{ txtButton }}
+      </label>
+    </div>
+    <nav class="panel mt-6">
+      <div>
+          <router-link to="/dashboard" class="link">
+            Dashboard
+          </router-link>
+      </div>
+
+      <div>
+          <router-link to="/vagas" class="link">
+            Vagas
+          </router-link>
+      </div>
+          
+        
+    </nav>
   </header>
 </template>
 
@@ -18,26 +36,26 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "SideBar",
-  emits: ['alteredTheme'],
-  data () {
+  emits: ["alteredTheme"],
+  data() {
     return {
       darkMode: false,
-    }
+    };
   },
   computed: {
-    txtButton () {
+    txtButton() {
       if (this.darkMode) {
-        return 'desativar modo escuro'
+        return "desativar modo escuro";
       }
-      return 'ativar modo escuro'
-    }
+      return "ativar modo escuro";
+    },
   },
   methods: {
-    alterTheme () {
-      this.darkMode = !this.darkMode
-      this.$emit('alteredTheme', this.darkMode) 
-    }
-  }
+    alterTheme() {
+      this.darkMode = !this.darkMode;
+      this.$emit("alteredTheme", this.darkMode);
+    },
+  },
 });
 </script>
 
