@@ -7,28 +7,32 @@
         id="avatar"
       />
     </h1>
-    <div class="has-text-centered mt-6">
-      <label class="checkbox">
-        <input type="checkbox" @click="alterTheme" />
-        {{ txtButton }}
-      </label>
-    </div>
-    <nav class="panel mt-6">
-      <div>
-          <router-link to="/dashboard" class="link">
-            Dashboard
-          </router-link>
+    <nav class="mt-6">
+      <div class="navbar-content mt-3">
+        <router-link to="/dashboard" class="link">
+           Dashboard 
+        </router-link>
       </div>
 
-      <div>
-          <router-link to="/vagas" class="link">
-            Vagas
-          </router-link>
+      <div class="navbar-content mt-3">
+        <router-link to="/vagas" class="link"> Perfil </router-link>
       </div>
-          
-        
+
+      <div class="navbar-content mt-3">
+        <router-link to="/vagas" class="link">
+          <i class="fas fa-briefcase"></i> Vagas
+        </router-link>
+      </div>
+      
     </nav>
   </header>
+  <footer>
+    <div class="has-text-centered">
+        <button type="button" class="darkmode-button" @click="alterTheme">
+          {{ txtButton }}
+        </button>
+      </div>
+  </footer>
 </template>
 
 <script lang="ts">
@@ -45,9 +49,9 @@ export default defineComponent({
   computed: {
     txtButton() {
       if (this.darkMode) {
-        return "desativar modo escuro";
+        return "Modo escuro";
       }
-      return "ativar modo escuro";
+      return "Modo claro";
     },
   },
   methods: {
@@ -59,6 +63,6 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss">
 @import url("./style.scss");
 </style>

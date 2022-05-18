@@ -6,15 +6,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: #051c27;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
   background-color: rgb(240, 240, 240);
 }
 
-html {
-  font-family: "Poppins", sans-serif;
-}
-
 main {
-  --bg-primary: rgb(240, 240, 240);
+  --bg-primary: #051c27;;
   --txt-primary: #111;
 
   header {
@@ -24,8 +25,8 @@ main {
 }
 
 main.dark-mode {
-  --bg-primary: #051c27;
-  --txt-primary: #eee;
+  --bg-primary: rgb(240, 240, 240);
+  --txt-primary: #111;
 
   header.dark-mode {
     --bg-secondary: linear-gradient(82deg, rgb(4, 52, 80) 0%, #051c27 70%);
@@ -35,16 +36,22 @@ main.dark-mode {
 
 #content-primary{
   background-color: var(--bg-primary);
-  color: var(--txt-primary)
+  color: var(--txt-primary);
+  height: 100vh;
 }
 
 #content-secondary{
-  background-color: #fff;
+  background-color: var(--bg-primary);
   color: var(--txt-secondary);
-  position: relative;
-  display: block;
   margin-top: 1em;
   margin-bottom: 1em;
+  height: calc(100vh - 2em);
+
+  &.fixed-top {
+    position: fixed;
+    display: block;
+    overflow-y: auto;
+  }
 }
 
 #form-post {
