@@ -5,79 +5,14 @@
         <h1>Cadastro</h1>
       </div>
     </div>
-    <div class="columns content-dev">
-      <div class="column is-12">
-        <div
-          class="is-flex is-align-items-center is-justify-content-space-between"
-        >
-          <section>
-            <label for="txtNome"> <strong> Nome do usuário </strong> </label>
-          </section>
-        </div>
-        <div class="is-flex is-align-items-center">
-          <div class="field mt-2">
-            <div class="control has-icons-left">
-              <input
-                class="input"
-                type="text"
-                placeholder="Digite seu nome de usuário"
-              />
-              <span class="icon is-left">
-                <i class="fas fa-user"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="is-flex is-align-items-center is-justify-content-space-between mt-4"
-        >
-          <section>
-            <label for="txtPassword1"> <strong> Senha </strong></label>
-          </section>
-        </div>
-        <div class="is-flex is-align-items-center">
-          <div class="field mt-2">
-            <div class="control has-icons-left">
-              <input
-                id="txtPassword1"
-                class="input"
-                type="password"
-                placeholder="Digite sua senha"
-              />
-              <span class="icon is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="is-flex is-align-items-center is-justify-content-space-between mt-4"
-        >
-          <label for="txtPassword2"> <strong> Confirmar senha </strong> </label>
-        </div>
-        <div class="is-flex is-align-items-center">
-          <div class="field mt-2">
-            <div class="control has-icons-left">
-              <input
-                id="txtPassword2"
-                class="input"
-                type="password"
-                placeholder="Digite sua senha novamente"
-              />
-              <span class="icon is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <form action="#">
+      <TextRegister :placeholder="apelido" :icon="iconName"/>
+      <TextRegister :placeholder="senha" :icon="iconSenha"/>
+      <TextRegister :placeholder="confirmaSenha" :icon="iconSenha"/>
+    </form>
     <div class="column has-text-right">
       <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
     </div>
-    
   </ListBox>
 </template>
 
@@ -85,21 +20,34 @@
 import { defineComponent } from "vue";
 import ListBox from "../Listas/ListBox.vue";
 import ButtonsRegister from "../Utils/ButtonsRegister.vue";
+import TextRegister from "../Utils/TextRegister.vue";
 export default defineComponent({
   name: "DevRegister",
-  components: { ListBox, ButtonsRegister },
+  components: { ListBox, ButtonsRegister, TextRegister },
+  
   methods: {
-    avancarPagina () {
-      this.$router.push({ name: "DevRegisterCarreira"})
+    avancarPagina() {
+      this.$router.push({ name: "DevRegisterCarreira" });
+    },
+  },
+  data(){
+    return {
+      apelido: "Digite seu apelido",
+      senha: "Digite uma senha",
+      confirmaSenha: "Confirme uma senha",
+      iconName: "fas fa-user",
+      iconApelido: "fas fa-lock",
+      iconSenha: "fas fa-lock",
     }
   }
 });
 </script>
 
 <style scoped>
+@import url("./Login.scss");
 .box {
   margin: 2em 25em 10em;
-  height: 40em;
+  height: 35em;
 }
 .content-dev {
   margin: 3em;
