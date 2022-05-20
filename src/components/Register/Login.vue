@@ -57,5 +57,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import url("./Login.scss");
+@import url("./Primary.scss");
 </style>

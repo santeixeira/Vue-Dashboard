@@ -43,7 +43,7 @@ input{
   align-items: center;
   height: 50px;
   width: 100%;
-  margin: 2em 0 2em;
+  margin: 2em 0 0em;
   padding: 0 2em 0;
   position: relative;
 }

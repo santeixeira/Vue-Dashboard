@@ -6,6 +6,7 @@ import DevRegister from "../components/Register/DevRegister.vue";
 import DevRegisterEmail from "../components/Register/DevRegisterEmail.vue";
 import ForgotPassword from "../components/Register/ForgotPassword.vue";
 import DevRegisterCarreira from "../components/Register/DevRegisterCarreira.vue";
+import DevRegisterSkill from "../components/Register/DevRegisterSkill.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -42,6 +43,11 @@ const routes: RouteRecordRaw[] = [
     path: "/forgot-password",
     name: "ForgotPassword",
     component: ForgotPassword,
+  },
+  {
+    path: "/register/skill",
+    name: "DevRegisterSkill",
+    component: DevRegisterSkill,
   },
 ];
 

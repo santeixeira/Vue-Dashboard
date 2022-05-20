@@ -58,6 +58,7 @@ a {
   font-weight: 500;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  color: rgb(126, 126, 126);
 }
 .input-box input:focus,
 .input-box input:valid {
@@ -89,3 +90,4 @@ a {
 .text a:hover {
   text-decoration: underline;
 }
+

@@ -1,0 +1,62 @@
+textarea.textarea {
+  border-bottom: rgba(0, 0, 0, 0.2) 2px solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+  box-shadow: none;
+  max-height: 3em;
+  padding: 0 1em 0;
+}
+
+textarea.textarea::placeholder {
+  font-size: 1em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.button-space-between {
+  justify-content: space-between;
+}
+.box {
+  margin: 2em 25em 10em;
+  height: 50em;
+}
+.content-dev {
+  margin: 0em 1em 0;
+}
+.title-dev {
+  margin: 3em;
+}
+
+.progressbar li {
+  float: left;
+  width: 20%;
+  position: relative;
+  text-align: center;
+}
+
+.input::placeholder {
+  font-size: small;
+  font-weight: 700;
+}
+
+.input,
+.textarea,
+select {
+  width: 25em;
+}
+
+li {
+  margin-right: 1.75em;
+}
+
+.anter {
+  background-color: #051c27;
+}
+
+.anter:hover {
+  border: 2px solid #051c27;
+  background: none;
+  color: #051c27;
+}

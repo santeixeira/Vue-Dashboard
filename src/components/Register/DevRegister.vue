@@ -7,7 +7,7 @@
     </div>
     <form action="#">
       <TextRegister :placeholder="apelido" :icon="iconName"/>
-      <TextRegister :placeholder="senha" :icon="iconSenha"/>
+      <TextRegister :placeholder="senha" :icon="iconSenha" :type="password"/>
       <TextRegister :placeholder="confirmaSenha" :icon="iconSenha"/>
     </form>
     <div class="column has-text-right">
@@ -38,23 +38,20 @@ export default defineComponent({
       iconName: "fas fa-user",
       iconApelido: "fas fa-lock",
       iconSenha: "fas fa-lock",
+      password: "password"
     }
   }
 });
 </script>
 
-<style scoped>
-@import url("./Login.scss");
+<style lang="scss" scoped>
+@import url("./Primary.scss");
 .box {
   margin: 2em 25em 10em;
   height: 35em;
 }
 .content-dev {
   margin: 3em;
-}
-
-.button {
-  width: calc();
 }
 
 .progressbar li {

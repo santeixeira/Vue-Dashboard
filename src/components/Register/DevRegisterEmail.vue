@@ -41,11 +41,6 @@ export default defineComponent({
 .content-dev {
   margin: 3em;
 }
-
-.button {
-  width: calc();
-}
-
 .progressbar li {
   float: left;
   width: 20%;

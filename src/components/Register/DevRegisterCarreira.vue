@@ -25,13 +25,17 @@
               </div>
             </div>
             <TextRegister :placeholder="titulacao" :icon="iconTitulacao" />
-            <Tag></Tag>
-            <SelectRegister :icon="modalidadeIcon">
-              <option value="default" default>Selecione um formato de trabalho desejado</option>
+            <Tag v-for="(tag, index) in tags" :key="index" />
+            <SelectRegister :icon="modalidadeIcon" @addingTag="addTag">
+              <option value="default" selected>
+                Selecione um formato de trabalho desejado
+              </option>
               <option value="remoto">Remoto</option>
               <option value="presencial">Presencial</option>
               <option value="hibrido">Híbrido</option>
             </SelectRegister>
+            <Tag v-for="(tag, index) in tags" :key="index" />
+            <TextRegister :placeholder="cidade" :icon="cidadeIcon" />
             <div class="is-flex">
               <TextSalaryRegister>PJ</TextSalaryRegister>
               <TextSalaryRegister>CLT</TextSalaryRegister>
@@ -44,7 +48,7 @@
       <ButtonsRegister @click="voltarPagina" :class="btnAnterior"
         >Anterior</ButtonsRegister
       >
-      <ButtonsRegister @click="avancarPagina" >Next</ButtonsRegister>
+      <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
     </div>
   </ListBox>
 </template>
@@ -57,6 +61,7 @@ import TextSalaryRegister from "../Utils/TextSalaryRegister.vue";
 import TextRegister from "../Utils/TextRegister.vue";
 import SelectRegister from "../Utils/SelectRegister.vue";
 import Tag from "../Utils/Tag.vue";
+import tags from "@/interface/tags";
 export default defineComponent({
   name: "DevRegisterCarreira",
   components: {
@@ -73,21 +78,45 @@ export default defineComponent({
       modalidade: "Selecione a modalidade de trabalho desejada",
       modalidadeIcon: "fa-solid fa-house-laptop",
       iconTitulacao: "fas fa-brain",
+      cidade: "Digite uma cidade de preferência",
+      cidadeIcon: "fas fa-city",
       btnAnterior: "anter",
+      tags: [] as tags[],
     };
   },
   methods: {
     avancarPagina() {
-      this.$router.push({ name: "DevSobre" });
+      this.$router.push({ name: "DevRegisterSkill" });
     },
     voltarPagina() {
       this.$router.push({ name: "DevRegister" });
+    },
+    addTag(tag: tags) {
+      this.tags.push(tag);
     },
   },
 });
 </script>
 
 <style scoped>
+@import url("Primary.scss");
+textarea.textarea {
+  border-bottom: rgba(0, 0, 0, 0.2) 2px solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+  box-shadow: none;
+  max-height: 3em;
+  padding: 0 1em 0;
+}
+
+textarea.textarea::placeholder {
+  font-size: 1em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .button-space-between {
   justify-content: space-between;
 }
