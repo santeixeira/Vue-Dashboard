@@ -11,11 +11,7 @@
               </strong>
             </span>
             <Stack />
-            <Tag
-              :placeholder="skill"
-              :icon="skillIcon"
-              :options="skillArray"
-            />
+            <Tag :placeholder="skill" :icon="skillIcon" :options="skillArray" />
             <SelectRegister :icon="inglesIcon">
               <option value="default" selected>
                 Selecione o seu nível de inglês
@@ -28,6 +24,13 @@
               <option value="Avançado">Avançado</option>
               <option value="Fluente">Fluente</option>
             </SelectRegister>
+            <span class="text">
+              <strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe necessitatibus labore excepturi corrupti.
+              </strong>
+            </span>
+            <TextRegister :placeholder="linkedIn" :icon="linkedInIcon" />
+            <TextRegister :placeholder="github" :icon="githubIcon" />
           </form>
         </div>
       </div>
@@ -45,14 +48,18 @@
 import { defineComponent } from "vue";
 import ListBox from "../Listas/ListBox.vue";
 import ButtonsRegister from "../Utils/ButtonsRegister.vue";
-import TextRegister from "../Utils/TextRegister.vue";
 import Tag from "../Utils/Tag.vue";
 import Stack from "../Utils/Stack.vue";
+import TextRegister from "../Utils/TextRegister.vue";
 import SelectRegister from "../Utils/SelectRegister.vue";
 export default defineComponent({
   name: "DevRegisterSkill",
   data() {
     return {
+      linkedIn: "Digite o link de seu perfil LinkedIn",
+      linkedInIcon: "fa-brands fa-linkedin",
+      github: "Digite o link de seu perfil Github",
+      githubIcon: "fa-brands fa-github",
       skill: "Digite uma experiência de tecnologia",
       skillIcon: "fas fa-code",
       inglesIcon: "fas fa-language",
@@ -85,10 +92,11 @@ export default defineComponent({
     Tag,
     Stack,
     SelectRegister,
+    TextRegister,
   },
   methods: {
     avancarPagina() {
-      this.$router.push({ name: "DevSobre" });
+      this.$router.push({ name: "DevRegisterExperiences" });
     },
     voltarPagina() {
       this.$router.push({ name: "DevRegisterCarreira" });
@@ -103,7 +111,7 @@ export default defineComponent({
   text-align: left;
 }
 .box {
-  height: 35em;
+  height: 45em;
 }
 .anter {
   background-color: #051c27;

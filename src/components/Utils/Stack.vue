@@ -32,7 +32,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ITags from "@/interface/ITags";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Stack",

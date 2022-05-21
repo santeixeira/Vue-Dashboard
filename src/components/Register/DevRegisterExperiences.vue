@@ -3,7 +3,7 @@
     <div class="forms content">
       <div class="form-content">
         <div class="login-form">
-          <div class="title">Carreira</div>
+          <div class="title">Experiências</div>
           <form action="#">
             <div class="columns content-dev">
               <div class="column is-12">
@@ -30,12 +30,13 @@
               :icon="iconTitulacao"
               :options="modalidadeArray"
             />
+
             <Tag
               :placeholder="cidade"
               :icon="iconTitulacao"
               :options="cidadeArray"
             />
-            <div class="is-flex" id="career">
+            <div class="is-flex">
               <TextSalaryRegister>PJ</TextSalaryRegister>
               <TextSalaryRegister>CLT</TextSalaryRegister>
             </div>
@@ -85,10 +86,10 @@ export default defineComponent({
   },
   methods: {
     avancarPagina() {
-      this.$router.push({ name: "DevRegisterSkill" });
+      this.$router.push({ name: "DevRegisterPersonal" });
     },
     voltarPagina() {
-      this.$router.push({ name: "DevRegister" });
+      this.$router.push({ name: "DevRegisterSkill" });
     },
     addTag(tag: ITags) {
       this.tags.push(tag);
@@ -150,10 +151,6 @@ select {
 
 li {
   margin-right: 1.75em;
-}
-
-#career{
-  margin: 0;
 }
 
 .anter {
