@@ -6,19 +6,27 @@
           <div class="title">Habilidade</div>
           <form action="#">
             <span class="text">
-              <strong> Destas experiencias de trabalho, quais se adequam a você? </strong>
+              <strong>
+                Destas experiencias de trabalho, quais se adequam a você?
+              </strong>
             </span>
             <Stack />
-            <Tag />
-            <TextRegister :placeholder="skill" :icon="skillIcon" />
+            <Tag
+              :placeholder="skill"
+              :icon="skillIcon"
+              :options="skillArray"
+            />
             <SelectRegister :icon="inglesIcon">
               <option value="default" selected>
                 Selecione o seu nível de inglês
               </option>
-              <option value="Nenhum">Nenhum</option>
+              <option value="Não possuo experiência">
+                Não possuo experiência
+              </option>
               <option value="Básico">Básico</option>
               <option value="Intermediário">Intermediário</option>
               <option value="Avançado">Avançado</option>
+              <option value="Fluente">Fluente</option>
             </SelectRegister>
           </form>
         </div>
@@ -49,12 +57,31 @@ export default defineComponent({
       skillIcon: "fas fa-code",
       inglesIcon: "fas fa-language",
       btnAnterior: "anter",
+      skillArray: [
+        "HTML e CSS",
+        "JavaScript",
+        "Java",
+        "SQL",
+        "Node.JS",
+        "Python",
+        "AWS",
+        "Git",
+        "C#",
+        "Angular.JS",
+        "React Native",
+        "Android",
+        "iOS",
+        "MySQL",
+        "Scrum",
+        "Linux",
+        "Excel",
+        "MongoDB",
+      ],
     };
   },
   components: {
     ListBox,
     ButtonsRegister,
-    TextRegister,
     Tag,
     Stack,
     SelectRegister,

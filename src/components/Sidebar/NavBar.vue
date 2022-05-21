@@ -24,43 +24,12 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end">
-          <div class="navbar-item">
-            <input type="checkbox" @click="alterTheme">
-          </div>
-          <div class="navbar-item">
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                <img
-                  src="https://img.freepik.com/free-photo/tropical-palm-leaves-monstera-pink-background-flat-lay-top-view-minimal-concept_46686-199.jpg?w=2000"
-                  class="avatar-card"
-                />
-                San Teixeira Tech
-              </a>
-
-              <div class="navbar-dropdown">
-                <img
-                  src="https://img.freepik.com/free-photo/tropical-palm-leaves-monstera-pink-background-flat-lay-top-view-minimal-concept_46686-199.jpg?w=2000"
-                  class="avatar-dropdown"
-                />
-                <router-link to="/dashboard" class="navbar-item">
-                  Dashboard
-                </router-link>
-                <router-link to="/dashboard" class="navbar-item">
-                  Vagas
-                </router-link>
-                <router-link to="/dashboard" class="navbar-item">
-                  Configurações
-                </router-link>
-                <router-link to="/dashboard" class="navbar-item">
-                  Configurações
-                </router-link>
-                <router-link to="/dashboard" class="navbar-item">
-                  Configurações
-                </router-link>
-                <hr class="navbar-divider" />
-                <a class="navbar-item"> Sair </a>
-              </div>
-            </div>
+          <div class="input-boxes">
+            <ButtonsRegister>
+              <router-link to="/login" class="navbar-item">
+                Login
+              </router-link>
+            </ButtonsRegister>
           </div>
         </div>
       </div>
@@ -69,6 +38,8 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import NavbarUser from "../Utils/NavbarUser.vue";
+import ButtonsRegister from "../Utils/ButtonsRegister.vue";
 export default defineComponent({
   name: "NavBar",
   emits: ["alteredTheme"],
@@ -91,6 +62,7 @@ export default defineComponent({
       this.$emit("alteredTheme", this.darkMode);
     },
   },
+  components: { ButtonsRegister },
 });
 </script>
 <style scoped>
@@ -98,13 +70,13 @@ export default defineComponent({
   color: #fff;
 }
 
-.navbar-link:hover{
+.navbar-link:hover {
   color: #000;
   border-radius: 2em 2em 0 0;
 }
 
-.navbar-dropdown{
-  border-radius:  0 0 2em 2em;
+.navbar-dropdown {
+  border-radius: 0 0 2em 2em;
 }
 
 .navbar {

@@ -25,17 +25,17 @@
               </div>
             </div>
             <TextRegister :placeholder="titulacao" :icon="iconTitulacao" />
-            <Tag v-for="(tag, index) in tags" :key="index" />
-            <SelectRegister :icon="modalidadeIcon" @addingTag="addTag">
-              <option value="default" selected>
-                Selecione um formato de trabalho desejado
-              </option>
-              <option value="remoto">Remoto</option>
-              <option value="presencial">Presencial</option>
-              <option value="hibrido">Híbrido</option>
-            </SelectRegister>
-            <Tag v-for="(tag, index) in tags" :key="index" />
-            <TextRegister :placeholder="cidade" :icon="cidadeIcon" />
+            <Tag
+              :placeholder="modalidade"
+              :icon="iconTitulacao"
+              :options="modalidadeArray"
+            />
+
+            <Tag
+              :placeholder="cidade"
+              :icon="iconTitulacao"
+              :options="cidadeArray"
+            />
             <div class="is-flex">
               <TextSalaryRegister>PJ</TextSalaryRegister>
               <TextSalaryRegister>CLT</TextSalaryRegister>
@@ -59,9 +59,8 @@ import ListBox from "../Listas/ListBox.vue";
 import ButtonsRegister from "../Utils/ButtonsRegister.vue";
 import TextSalaryRegister from "../Utils/TextSalaryRegister.vue";
 import TextRegister from "../Utils/TextRegister.vue";
-import SelectRegister from "../Utils/SelectRegister.vue";
 import Tag from "../Utils/Tag.vue";
-import tags from "@/interface/tags";
+import ITags from "@/interface/ITags";
 export default defineComponent({
   name: "DevRegisterCarreira",
   components: {
@@ -69,7 +68,6 @@ export default defineComponent({
     ButtonsRegister,
     TextSalaryRegister,
     TextRegister,
-    SelectRegister,
     Tag,
   },
   data() {
@@ -81,7 +79,9 @@ export default defineComponent({
       cidade: "Digite uma cidade de preferência",
       cidadeIcon: "fas fa-city",
       btnAnterior: "anter",
-      tags: [] as tags[],
+      modalidadeArray: ["Remoto", "Hibrido", "Presencial"],
+      cidadeArray: ["Fortaleza", "Recife", "Salvador", "São Paulo", "Rio de Janeiro", "Brasília", "Belo Horizonte"],
+      tags: [] as ITags[],
     };
   },
   methods: {
@@ -91,7 +91,7 @@ export default defineComponent({
     voltarPagina() {
       this.$router.push({ name: "DevRegister" });
     },
-    addTag(tag: tags) {
+    addTag(tag: ITags) {
       this.tags.push(tag);
     },
   },

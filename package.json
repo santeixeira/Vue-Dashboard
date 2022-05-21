@@ -10,6 +10,7 @@
     "sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
   },
   "dependencies": {
+    "@vueform/multiselect": "^2.3.4",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.15",
