@@ -5,7 +5,7 @@ import Register from "@/views/Register.vue";
 import Login from "@/components/Register/Login.vue";
 import ForgotPassword from "@/components/Register/ForgotPassword.vue";
 
-import Credencials from "@/components/Register/Credencials.vue";
+import Credentials from "@/components/Register/Credentials.vue";
 import DevEmail from "@/components/Register/DevEmail.vue";
 import Job from "@/components/Register/Job.vue";
 import Skill from "@/components/Register/Skill.vue";
@@ -48,8 +48,8 @@ const routes: RouteRecordRaw[] = [
       
       {
         path: "",
-        name: "Credencials",
-        component: Credencials,
+        name: "Credentials",
+        component: Credentials,
       },
       {
         path: "/personal",

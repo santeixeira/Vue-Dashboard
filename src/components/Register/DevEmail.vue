@@ -28,7 +28,7 @@ export default defineComponent({
   components: { ListBox, ButtonsRegister },
   methods: {
     avancarPagina() {
-      this.$router.push({ name: "Credencials" });
+      this.$router.push({ name: "Credentials" });
     },
   },
 });

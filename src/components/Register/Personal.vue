@@ -72,11 +72,13 @@ export default defineComponent({
       this.$router.push({ name: "Diversity" });
     },
     voltarPagina() {
-      this.$router.push({ name: "Credencials" });
+      this.$router.push({ name: "Credentials" });
     },
   },
 });
 </script>
+
+
 
 <style scoped>
 @import url("Primary.scss");

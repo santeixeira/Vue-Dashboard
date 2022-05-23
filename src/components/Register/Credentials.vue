@@ -25,7 +25,11 @@
 </template>
 
 <script lang="ts">
+import ICredentials from "@/interface/ICredentials";
+import { key } from "@/store";
+import { computed } from "@vue/reactivity";
 import { defineComponent } from "vue";
+import { useStore } from "vuex";
 import ListBox from "../Listas/ListBox.vue";
 import ButtonsRegister from "../Utils/ButtonsRegister.vue";
 import TextRegister from "../Utils/TextRegister.vue";
@@ -48,8 +52,15 @@ export default defineComponent({
       iconApelido: "fas fa-lock",
       iconSenha: "fas fa-lock",
       password: "password",
+      credencial: [] as ICredentials[],
     };
   },
+  setup() {
+    const store = useStore(key)
+    return {
+      credentials: computed(() => store.state.credentials)
+    }
+  }
 });
 </script>
 
