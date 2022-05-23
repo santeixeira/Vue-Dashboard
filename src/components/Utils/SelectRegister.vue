@@ -11,7 +11,19 @@ import { defineComponent } from "vue";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "SelectRegister",
-  props: ["icon", "placeholder"],
+  props: {
+    placeholder: {
+      type: String,
+    },
+    icon: {
+      type: String,
+    },
+    options: {
+      type: [Array, Object, Function],
+      required: false,
+      default: () => [],
+    },
+  },
 });
 </script>
 

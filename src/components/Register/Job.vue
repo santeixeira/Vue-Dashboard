@@ -1,60 +1,57 @@
 <template>
-  <ListBox>
-    <div class="forms content">
-      <div class="form-content">
-        <div class="login-form">
-          <div class="title">Carreira</div>
-          <form action="#">
-            <div class="columns content-dev">
-              <div class="column is-12">
-                <div
-                  class="is-flex is-align-items-center is-justify-content-space-between"
-                >
-                  <section>
-                    <label for="txtNome">
-                      <strong> Faça um pequeno resumo sobre você </strong>
-                    </label>
-                  </section>
-                </div>
-                <div class="is-flex is-align-items-center">
-                  <textarea
-                    class="textarea mt-2"
-                    placeholder="Digite seus objetivos como desenvolvedor"
-                  ></textarea>
-                </div>
+  <div class="forms content">
+    <div class="form-content">
+      <div class="login-form">
+        <div class="title">Carreira</div>
+        <form action="#">
+          <div class="columns content-dev">
+            <div class="column is-12">
+              <div
+                class="is-flex is-align-items-center is-justify-content-space-between"
+              >
+                <section>
+                  <label for="txtNome">
+                    <strong> Faça um pequeno resumo sobre você </strong>
+                  </label>
+                </section>
+              </div>
+              <div class="is-flex is-align-items-center">
+                <textarea
+                  class="textarea mt-2"
+                  placeholder="Digite seus objetivos como desenvolvedor"
+                ></textarea>
               </div>
             </div>
-            <TextRegister :placeholder="titulacao" :icon="iconTitulacao" />
-            <Tag
-              :placeholder="modalidade"
-              :icon="iconTitulacao"
-              :options="modalidadeArray"
-            />
-            <Tag
-              :placeholder="cidade"
-              :icon="iconTitulacao"
-              :options="cidadeArray"
-            />
-            <div class="is-flex" id="career">
-              <TextSalaryRegister>PJ</TextSalaryRegister>
-              <TextSalaryRegister>CLT</TextSalaryRegister>
-            </div>
-          </form>
-        </div>
+          </div>
+          <TextRegister :placeholder="titulacao" :icon="iconTitulacao" />
+          <Tag
+            :placeholder="modalidade"
+            :icon="iconTitulacao"
+            :options="modalidadeArray"
+          />
+          <Tag
+            :placeholder="cidade"
+            :icon="iconTitulacao"
+            :options="cidadeArray"
+          />
+          <div class="is-flex" id="career">
+            <TextSalaryRegister>PJ</TextSalaryRegister>
+            <TextSalaryRegister>CLT</TextSalaryRegister>
+          </div>
+        </form>
       </div>
     </div>
-    <div class="input-box is-flex button-space-between">
-      <ButtonsRegister @click="voltarPagina" :class="btnAnterior"
-        >Anterior</ButtonsRegister
-      >
-      <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
-    </div>
-  </ListBox>
+  </div>
+  <div class="input-box is-flex button-space-between">
+    <ButtonsRegister @click="close" :class="btnAnterior"
+      >Anterior</ButtonsRegister
+    >
+    <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ListBox from "../Listas/ListBox.vue";
 import ButtonsRegister from "../Utils/ButtonsRegister.vue";
 import TextSalaryRegister from "../Utils/TextSalaryRegister.vue";
 import TextRegister from "../Utils/TextRegister.vue";
@@ -64,7 +61,6 @@ export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Job",
   components: {
-    ListBox,
     ButtonsRegister,
     TextSalaryRegister,
     TextRegister,
@@ -80,7 +76,15 @@ export default defineComponent({
       cidadeIcon: "fas fa-city",
       btnAnterior: "anter",
       modalidadeArray: ["Remoto", "Hibrido", "Presencial"],
-      cidadeArray: ["Fortaleza", "Recife", "Salvador", "São Paulo", "Rio de Janeiro", "Brasília", "Belo Horizonte"],
+      cidadeArray: [
+        "Fortaleza",
+        "Recife",
+        "Salvador",
+        "São Paulo",
+        "Rio de Janeiro",
+        "Brasília",
+        "Belo Horizonte",
+      ],
       tags: [] as ITags[],
     };
   },
@@ -93,6 +97,9 @@ export default defineComponent({
     },
     addTag(tag: ITags) {
       this.tags.push(tag);
+    },
+    close() {
+      this.$emit("close");
     },
   },
 });
@@ -153,7 +160,7 @@ li {
   margin-right: 1.75em;
 }
 
-#career{
+#career {
   margin: 0;
 }
 

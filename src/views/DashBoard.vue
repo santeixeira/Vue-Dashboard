@@ -1,8 +1,11 @@
 <template>
   <ListBox>
     <div class="columns">
-      <div class="column is-2">
-        <input type="text" class="input" />
+      <div class="column is-3">
+        <a @click="isOpen = true">Adicione carreira</a>
+        <Modal :open="isOpen" @close="isOpen = !isOpen">
+          <Job></Job>
+        </Modal>
       </div>
     </div>
   </ListBox>
@@ -18,16 +21,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import devs from "../interface/devs";
 import MainList from "../components/Listas/MainList.vue";
 import ListBox from "../components/Listas/ListBox.vue";
+import Modal from "@/components/Utils/Modal.vue";
+import Job from "@/components/Register/Job.vue";
 
 export default defineComponent({
   name: "DashBoard",
   components: {
     MainList,
     ListBox,
+    Modal,
+    Job,
   },
   data() {
     return {
@@ -38,6 +45,10 @@ export default defineComponent({
     listVoid(): boolean {
       return this.devs.length === 0;
     },
+  },
+  setup() {
+    const isOpen = ref(false);
+    return { isOpen };
   },
 });
 </script>

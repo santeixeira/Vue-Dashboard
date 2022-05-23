@@ -11,7 +11,7 @@
 
     <form action="#">
       <section>
-        <TextRegister :placeholder="apelido" :icon="iconName" />
+        <TextRegister :placeholder="apelido" :icon="iconName" @keydown.space.prevent/>
         <TextRegister :placeholder="senha" :icon="iconSenha" :type="password" />
         <TextRegister :placeholder="confirmaSenha" :icon="iconSenha" type="password" />
       </section>
@@ -37,7 +37,6 @@ export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Credencials",
   components: { ListBox, ButtonsRegister, TextRegister },
-
   methods: {
     avancarPagina() {
       this.$router.push({ name: "Personal" });

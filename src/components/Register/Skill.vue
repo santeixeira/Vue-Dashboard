@@ -26,7 +26,8 @@
             </SelectRegister>
             <span class="text">
               <strong>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe necessitatibus labore excepturi corrupti.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                necessitatibus labore excepturi corrupti.
               </strong>
             </span>
             <TextRegister :placeholder="linkedIn" :icon="linkedInIcon" />
