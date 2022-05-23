@@ -61,7 +61,8 @@ import TextRegister from "../Utils/TextRegister.vue";
 import Tag from "../Utils/Tag.vue";
 import ITags from "@/interface/ITags";
 export default defineComponent({
-  name: "DevRegisterCarreira",
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Job",
   components: {
     ListBox,
     ButtonsRegister,

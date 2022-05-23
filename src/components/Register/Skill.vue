@@ -53,7 +53,8 @@ import Stack from "../Utils/Stack.vue";
 import TextRegister from "../Utils/TextRegister.vue";
 import SelectRegister from "../Utils/SelectRegister.vue";
 export default defineComponent({
-  name: "DevRegisterSkill",
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Skill",
   data() {
     return {
       linkedIn: "Digite o link de seu perfil LinkedIn",

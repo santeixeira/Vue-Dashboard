@@ -23,11 +23,12 @@ import { defineComponent } from "vue";
 import ListBox from "../Listas/ListBox.vue";
 import ButtonsRegister from "../Utils/ButtonsRegister.vue";
 export default defineComponent({
-  name: "DevRegister",
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "DevEmail",
   components: { ListBox, ButtonsRegister },
   methods: {
     avancarPagina() {
-      this.$router.push({ name: "DevRegister" });
+      this.$router.push({ name: "Credencials" });
     },
   },
 });

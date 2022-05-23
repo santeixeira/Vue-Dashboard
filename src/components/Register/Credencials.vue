@@ -1,18 +1,26 @@
+/* eslint-disable vue/multi-word-component-names */
 <template>
   <ListBox>
-    <div class="columns content-dev">
-      <div class="column is-12">
-        <h1>Cadastro</h1>
+    <header>
+      <div class="columns content-dev">
+        <div class="column is-12">
+          <h1>Cadastro</h1>
+        </div>
       </div>
-    </div>
+    </header>
+
     <form action="#">
-      <TextRegister :placeholder="apelido" :icon="iconName"/>
-      <TextRegister :placeholder="senha" :icon="iconSenha" :type="password"/>
-      <TextRegister :placeholder="confirmaSenha" :icon="iconSenha"/>
+      <section>
+        <TextRegister :placeholder="apelido" :icon="iconName" />
+        <TextRegister :placeholder="senha" :icon="iconSenha" :type="password" />
+        <TextRegister :placeholder="confirmaSenha" :icon="iconSenha" type="password" />
+      </section>
     </form>
-    <div class="column has-text-right">
-      <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
-    </div>
+    <footer>
+      <div class="column has-text-right">
+        <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
+      </div>
+    </footer>
   </ListBox>
 </template>
 
@@ -22,15 +30,16 @@ import ListBox from "../Listas/ListBox.vue";
 import ButtonsRegister from "../Utils/ButtonsRegister.vue";
 import TextRegister from "../Utils/TextRegister.vue";
 export default defineComponent({
-  name: "DevRegister",
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Credencials",
   components: { ListBox, ButtonsRegister, TextRegister },
-  
+
   methods: {
     avancarPagina() {
-      this.$router.push({ name: "DevRegisterCarreira" });
+      this.$router.push({ name: "Personal" });
     },
   },
-  data(){
+  data() {
     return {
       apelido: "Digite seu apelido",
       senha: "Digite uma senha",
@@ -38,9 +47,9 @@ export default defineComponent({
       iconName: "fas fa-user",
       iconApelido: "fas fa-lock",
       iconSenha: "fas fa-lock",
-      password: "password"
-    }
-  }
+      password: "password",
+    };
+  },
 });
 </script>
 

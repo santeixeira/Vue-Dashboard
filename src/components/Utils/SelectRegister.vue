@@ -1,11 +1,9 @@
 <template>
-  <div class="input-boxes">
-    <div class="input-box">
-      <i v-bind:class="icon"></i>
-      <select :placeholder="placeholder" required>
+  <div class="input-box">
+    <i v-bind:class="icon"></i>
+    <select :placeholder="placeholder" required>
       <slot></slot>
-      </select>
-    </div>
+    </select>
   </div>
 </template>
 <script lang="ts">
@@ -17,5 +15,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
