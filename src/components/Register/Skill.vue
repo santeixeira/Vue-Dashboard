@@ -1,48 +1,46 @@
 <template>
-  <ListBox>
-    <div class="forms content">
-      <div class="form-content">
-        <div class="login-form">
-          <div class="title">Habilidade</div>
-          <form action="#">
-            <span class="text">
-              <strong>
-                Destas experiencias de trabalho, quais se adequam a você?
-              </strong>
-            </span>
-            <Stack />
-            <Tag :placeholder="skill" :icon="skillIcon" :options="skillArray" />
-            <SelectRegister :icon="inglesIcon">
-              <option value="default" selected>
-                Selecione o seu nível de inglês
-              </option>
-              <option value="Não possuo experiência">
-                Não possuo experiência
-              </option>
-              <option value="Básico">Básico</option>
-              <option value="Intermediário">Intermediário</option>
-              <option value="Avançado">Avançado</option>
-              <option value="Fluente">Fluente</option>
-            </SelectRegister>
-            <span class="text">
-              <strong>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                necessitatibus labore excepturi corrupti.
-              </strong>
-            </span>
-            <TextRegister :placeholder="linkedIn" :icon="linkedInIcon" />
-            <TextRegister :placeholder="github" :icon="githubIcon" />
-          </form>
-        </div>
+  <div class="forms content">
+    <div class="form-content">
+      <div class="login-form">
+        <div class="title">Habilidade</div>
+        <form action="#">
+          <span class="text">
+            <strong>
+              Destas experiencias de trabalho, quais se adequam a você?
+            </strong>
+          </span>
+          <Stack />
+          <Tag :placeholder="skill" :icon="skillIcon" :options="skillArray" />
+          <SelectRegister :icon="inglesIcon">
+            <option value="default" selected>
+              Selecione o seu nível de inglês
+            </option>
+            <option value="Não possuo experiência">
+              Não possuo experiência
+            </option>
+            <option value="Básico">Básico</option>
+            <option value="Intermediário">Intermediário</option>
+            <option value="Avançado">Avançado</option>
+            <option value="Fluente">Fluente</option>
+          </SelectRegister>
+          <span class="text">
+            <strong>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              necessitatibus labore excepturi corrupti.
+            </strong>
+          </span>
+          <TextRegister :placeholder="linkedIn" :icon="linkedInIcon" />
+          <TextRegister :placeholder="github" :icon="githubIcon" />
+        </form>
       </div>
     </div>
-    <div class="input-box is-flex button-space-between">
-      <ButtonsRegister @click="voltarPagina" :class="btnAnterior"
-        >Anterior</ButtonsRegister
-      >
-      <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
-    </div>
-  </ListBox>
+  </div>
+  <div class="input-box is-flex button-space-between">
+    <ButtonsRegister @click="voltarPagina" :class="btnAnterior"
+      >Anterior</ButtonsRegister
+    >
+    <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
+  </div>
 </template>
 
 <script lang="ts">
@@ -89,7 +87,6 @@ export default defineComponent({
     };
   },
   components: {
-    ListBox,
     ButtonsRegister,
     Tag,
     Stack,

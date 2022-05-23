@@ -4,7 +4,7 @@
       <div class="column is-3">
         <a @click="isOpen = true">Adicione carreira</a>
         <Modal :open="isOpen" @close="isOpen = !isOpen">
-          <Job></Job>
+          <Skill></Skill>
         </Modal>
       </div>
     </div>
@@ -27,6 +27,7 @@ import MainList from "../components/Listas/MainList.vue";
 import ListBox from "../components/Listas/ListBox.vue";
 import Modal from "@/components/Utils/Modal.vue";
 import Job from "@/components/Register/Job.vue";
+import Skill from "@/components/Register/Skill.vue";
 
 export default defineComponent({
   name: "DashBoard",
@@ -34,8 +35,9 @@ export default defineComponent({
     MainList,
     ListBox,
     Modal,
-    Job,
-  },
+    
+    Skill
+},
   data() {
     return {
       devs: [] as devs[],

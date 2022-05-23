@@ -4,6 +4,11 @@
       <transition name="drop-in">
         <div class="vue-modal-inner" v-show="open">
           <div class="vue-modal-content">
+            <div class="columns">
+              <button type="button" class="close" @click="close">
+                <i class="fas fa-close"></i>
+              </button>
+            </div>
             <slot></slot>
           </div>
         </div>
@@ -13,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted, onUnmounted } from "vue";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Modal",
@@ -23,15 +28,40 @@ export default defineComponent({
       required: true,
     },
   },
-  methods: {
-    close() {
-      this.$emit("close");
-    },
+  setup(_, { emit }) {
+    const close = () => {
+      emit("close");
+    };
+
+    const handleKeyup = (event: { keyCode: number }) => {
+      if (event.keyCode === 27) {
+        close();
+      }
+    };
+
+    onMounted(() => document.addEventListener("keyup", handleKeyup));
+    onUnmounted(() => document.removeEventListener("keyup", handleKeyup));
+
+    return { close };
   },
 });
 </script>
 
 <style lagn="scss" scoped>
+.columns {
+  position: absolute !important;
+  align-content: right;
+}
+
+.close {
+  border: none;
+  background: none;
+  font-size: 1.25em;
+  font-weight: 700;
+  align-items: center;
+  margin: 0 0.25em;
+  cursor: pointer;
+}
 .vue-modal {
   position: fixed;
   top: 0;

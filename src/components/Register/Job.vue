@@ -43,10 +43,7 @@
     </div>
   </div>
   <div class="input-box is-flex button-space-between">
-    <ButtonsRegister @click="close" :class="btnAnterior"
-      >Anterior</ButtonsRegister
-    >
-    <ButtonsRegister @click="avancarPagina">Next</ButtonsRegister>
+    <ButtonsRegister @click="avancarPagina">Adicionar</ButtonsRegister>
   </div>
 </template>
 
@@ -125,7 +122,7 @@ textarea.textarea::placeholder {
 }
 
 .button-space-between {
-  justify-content: space-between;
+  justify-content: right;
 }
 .box {
   margin: 2em 25em 10em;
