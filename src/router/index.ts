@@ -12,6 +12,8 @@ import Skill from "@/components/Register/Skill.vue";
 import Experiences from "@/components/Register/Experiences.vue";
 import Personal from "@/components/Register/Personal.vue";
 import Diversity from "@/components/Register/Diversity.vue";
+import Social from "@/components/Register/Social.vue"
+import Completed from "@/components/Register/Completed.vue"
 
 const routes: RouteRecordRaw[] = [
   {
@@ -60,6 +62,11 @@ const routes: RouteRecordRaw[] = [
         component: Diversity,
       },
       {
+        path: "/social",
+        name: "Social",
+        component: Social,
+      },
+      {
         path: "/carreira",
         name: "Job",
         component: Job,
@@ -73,6 +80,11 @@ const routes: RouteRecordRaw[] = [
         path: "/experiences",
         name: "Experiences",
         component: Experiences,
+      },
+      {
+        path: "/completed",
+        name: "Completed",
+        component: Completed,
       },
     ]
   },

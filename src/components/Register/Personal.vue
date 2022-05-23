@@ -72,7 +72,7 @@ export default defineComponent({
       this.$router.push({ name: "Diversity" });
     },
     voltarPagina() {
-      this.$router.push({ name: "DevRegister" });
+      this.$router.push({ name: "Credencials" });
     },
   },
 });

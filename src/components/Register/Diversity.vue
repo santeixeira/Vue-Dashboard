@@ -96,7 +96,7 @@ export default defineComponent({
   },
   methods: {
     avancarPagina() {
-      this.$router.push({ name: "DevRegister" });
+      this.$router.push({ name: "Social" });
     },
     voltarPagina() {
       this.$router.push({ name: "Personal" });
