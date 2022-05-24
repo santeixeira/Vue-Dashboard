@@ -23,11 +23,11 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import devs from "../interface/devs";
-import MainList from "../components/Listas/MainList.vue";
-import ListBox from "../components/Listas/ListBox.vue";
+import MainList from "@/components/Listas/MainList.vue";
+import ListBox from "@/components/Listas/ListBox.vue";
 import Modal from "@/components/Utils/Modal.vue";
-import Job from "@/components/Register/Job.vue";
-import Skill from "@/components/Register/Skill.vue";
+import Job from "./Register/Job.vue";
+import Skill from "./Register/Skill.vue";
 
 export default defineComponent({
   name: "DashBoard",
@@ -35,9 +35,9 @@ export default defineComponent({
     MainList,
     ListBox,
     Modal,
-    
-    Skill
-},
+
+    Skill,
+  },
   data() {
     return {
       devs: [] as devs[],

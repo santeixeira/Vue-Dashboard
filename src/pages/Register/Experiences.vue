@@ -55,11 +55,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ListBox from "../Listas/ListBox.vue";
-import ButtonsRegister from "../Utils/ButtonsRegister.vue";
-import TextSalaryRegister from "../Utils/TextSalaryRegister.vue";
-import TextRegister from "../Utils/TextRegister.vue";
-import Tag from "../Utils/Tag.vue";
+import ListBox from "@/components/Listas/ListBox.vue";
+import ButtonsRegister from "@/components/Utils/ButtonsRegister.vue";
+import TextSalaryRegister from "@/components/Utils/TextSalaryRegister.vue";
+import TextRegister from "@/components/Utils/TextRegister.vue";
+import Tag from "@/components/Utils/Tag.vue";
 import ITags from "@/interface/ITags";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names

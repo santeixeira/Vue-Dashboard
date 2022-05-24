@@ -1,5 +1,5 @@
 <template>
-  <button type="button" class="button next" :class="buttonClass">
+  <button class="button next" :class="buttonClass">
     <slot></slot>
   </button>
 </template>
@@ -9,7 +9,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "ButtonsRegister",
-  props: ['buttonClass']
+  props: {
+    buttonClass: { type: String },
+  },
 });
 </script>
 
@@ -24,7 +26,7 @@ button {
 }
 
 button:hover {
-  background-color: #051B26;
+  background-color: #051b26;
   color: #fff;
 }
 </style>

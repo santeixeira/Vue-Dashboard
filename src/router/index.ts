@@ -1,19 +1,20 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import DashBoard from "@/views/DashBoard.vue";
-import Vagas from "@/views/Vagas.vue";
-import Register from "@/views/Register.vue";
-import Login from "@/components/Register/Login.vue";
-import ForgotPassword from "@/components/Register/ForgotPassword.vue";
+import DashBoard from "@/pages/DashBoard.vue";
+import Vagas from "@/pages/Vagas.vue";
+import Register from "@/pages/Register.vue";
 
-import Credentials from "@/components/Register/Credentials.vue";
-import DevEmail from "@/components/Register/DevEmail.vue";
-import Job from "@/components/Register/Job.vue";
-import Skill from "@/components/Register/Skill.vue";
-import Experiences from "@/components/Register/Experiences.vue";
-import Personal from "@/components/Register/Personal.vue";
-import Diversity from "@/components/Register/Diversity.vue";
-import Social from "@/components/Register/Social.vue"
-import Completed from "@/components/Register/Completed.vue"
+import Login from "@/pages/Auth/Login.vue";
+import ForgotPassword from "@/pages/Auth/ForgotPassword.vue";
+
+import Credentials from "@/pages/Register/Credentials.vue";
+import DevEmail from "@/pages/Register/DevEmail.vue";
+import Job from "@/pages/Register/Job.vue";
+import Skill from "@/pages/Register/Skill.vue";
+import Experiences from "@/pages/Register/Experiences.vue";
+import Personal from "@/pages/Register/Personal.vue";
+import Diversity from "@/pages/Register/Diversity.vue";
+import Social from "@/pages/Register/Social.vue"
+import Completed from "@/pages/Register/Completed.vue"
 
 const routes: RouteRecordRaw[] = [
   {

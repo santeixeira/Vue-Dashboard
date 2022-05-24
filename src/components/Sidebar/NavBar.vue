@@ -25,7 +25,7 @@
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end">
           <div class="input-boxes">
-            <ButtonsRegister>
+            <ButtonsRegister :class="darkbutton">
               <router-link to="/login" class="navbar-item">
                 Login
               </router-link>
@@ -46,6 +46,7 @@ export default defineComponent({
   data() {
     return {
       darkMode: false,
+      darkbutton: "anter"
     };
   },
   computed: {
@@ -65,7 +66,7 @@ export default defineComponent({
   components: { ButtonsRegister },
 });
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .navbar-link {
   color: #fff;
 }

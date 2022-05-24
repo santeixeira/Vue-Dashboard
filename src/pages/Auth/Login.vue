@@ -42,20 +42,26 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ListBox from "../Listas/ListBox.vue";
-import ButtonsRegister from "../Utils/ButtonsRegister.vue";
+import ListBox from "@/components/Listas/ListBox.vue";
+import ButtonsRegister from "@/components/Utils/ButtonsRegister.vue";
+import ILogin from "@/interface/ILogin"
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Login",
   components: { ListBox, ButtonsRegister },
+  data() {
+    return {
+      login: [] as ILogin[]
+    }
+  },
   methods: {
     avancarDashboard(){
       this.$router.push({ name: "DashBoard"})
-    }
+    },
   }
 });
 </script>
 
 <style lang="scss">
-@import url("./Primary.scss");
+@import url("@/pages/Register/Primary.scss");
 </style>

@@ -9,6 +9,17 @@
   background-color: #051c27;
 }
 
+@media only screen and (max-width: 820px){
+  .box {
+    margin: 1em 2em 3em!important;
+  }
+
+  .input-box { 
+    padding: 0em!important;
+    font-size: 0.75em!important;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: rgb(240, 240, 240);
@@ -38,6 +49,12 @@ main.dark-mode {
   background-color: var(--bg-primary);
   color: var(--txt-primary);
   height: 100vh;
+}
+
+@media only screen and (max-width: 820px){
+  #content-primary{
+    height: 50em;
+  }
 }
 
 #content-secondary{

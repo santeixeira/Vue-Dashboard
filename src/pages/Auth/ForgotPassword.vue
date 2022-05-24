@@ -21,8 +21,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ListBox from "../Listas/ListBox.vue";
-import ButtonsRegister from "../Utils/ButtonsRegister.vue";
+import ListBox from "@/components/Listas/ListBox.vue";
+import ButtonsRegister from "@/components/Utils/ButtonsRegister.vue";
 export default defineComponent({
   name: "ForgotPassword",
   components: { ListBox, ButtonsRegister },

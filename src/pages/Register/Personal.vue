@@ -37,9 +37,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ListBox from "../Listas/ListBox.vue";
-import ButtonsRegister from "../Utils/ButtonsRegister.vue";
-import TextRegister from "../Utils/TextRegister.vue";
+import ListBox from "@/components/Listas/ListBox.vue";
+import ButtonsRegister from "@/components/Utils/ButtonsRegister.vue";
+import TextRegister from "@/components/Utils/TextRegister.vue";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Personal",

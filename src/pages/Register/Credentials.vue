@@ -9,11 +9,23 @@
       </div>
     </header>
 
-    <form action="#">
+    <form @submit.prevent="save">
       <section>
-        <TextRegister :placeholder="apelido" :icon="iconName" @keydown.space.prevent/>
+        <TextRegister
+          :id="inputUsername"
+          :placeholder="apelido"
+          :icon="iconName"
+          v-model="inputUsername"
+          @keydown.space.prevent
+        />
         <TextRegister :placeholder="senha" :icon="iconSenha" :type="password" />
-        <TextRegister :placeholder="confirmaSenha" :icon="iconSenha" type="password" />
+        <TextRegister
+          :id="inputPassword"
+          :placeholder="confirmaSenha"
+          :icon="iconSenha"
+          v-model="inputPassword"
+          type="password"
+        />
       </section>
     </form>
     <footer>
@@ -25,22 +37,28 @@
 </template>
 
 <script lang="ts">
-import ICredentials from "@/interface/ICredentials";
-import { key } from "@/store";
 import { computed } from "@vue/reactivity";
 import { defineComponent } from "vue";
-import { useStore } from "vuex";
-import ListBox from "../Listas/ListBox.vue";
-import ButtonsRegister from "../Utils/ButtonsRegister.vue";
-import TextRegister from "../Utils/TextRegister.vue";
+import { useStore } from "@/store";
+import ListBox from "@/components/Listas/ListBox.vue";
+import ButtonsRegister from "@/components/Utils/ButtonsRegister.vue";
+import TextRegister from "@/components/Utils/TextRegister.vue";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Credencials",
   components: { ListBox, ButtonsRegister, TextRegister },
-  methods: {
-    avancarPagina() {
-      this.$router.push({ name: "Personal" });
+  props: {
+    id: {
+      type: String,
     },
+  },
+  mounted() {
+    if (this.id) {
+      const user = this.store.state.users.find(
+        (user) => user.id == this.id
+      );
+      this.inputUsername = user?.username || "";
+    }
   },
   data() {
     return {
@@ -51,15 +69,27 @@ export default defineComponent({
       iconApelido: "fas fa-lock",
       iconSenha: "fas fa-lock",
       password: "password",
-      credencial: [] as ICredentials[],
+      inputUsername: "",
+      inputPassword: "",
     };
   },
+  methods: {
+    avancarPagina() {
+      this.$router.push({ name: "Personal" });
+    },
+    save() {
+      this.store.commit("ADD_USER", [this.inputUsername, this.inputPassword]);
+      this.inputUsername = "";
+      this.inputPassword = "";
+    },
+  },
   setup() {
-    const store = useStore(key)
+    const store = useStore();
     return {
-      credentials: computed(() => store.state.credentials)
-    }
-  }
+      store,
+      users: computed(() => store.state.users),
+    };
+  },
 });
 </script>
 
