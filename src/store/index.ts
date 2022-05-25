@@ -2,7 +2,7 @@ import { ICredentials, ILogin } from "@/interface/index";
 import { InjectionKey } from "vue";
 import { createStore, Store, useStore as vuexUseStore } from "vuex";
 import { POST_LOGIN } from "./typeAction";
-import { LOGIN, LOGOUT } from "./typeMutation"
+import { LOGIN, LOGOUT } from "./typeMutation";
 import { client } from "@/http";
 
 interface State {
@@ -24,9 +24,9 @@ export const store = createStore<State>({
       } as ILogin;
       state.login.push(userAccess);
     },
-    // [LOGOUT](state, id: string) {
-    //   state.login = state.login.findIndex(user => user.id != id)
-    // }
+    [LOGOUT](state, email: string) {
+      state.login = state.login.filter((user) => user.email != email);
+    },
   },
   actions: {
     async [POST_LOGIN]({ commit }) {

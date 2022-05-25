@@ -13,35 +13,25 @@
             </span>
             <SelectRegister :icon="escolaridadeIcon">
               <option value="null" default>Selecione sua escolaridade</option>
-              <option value="Alfabetizado">Alfabetizado</option>
-              <option value="Ensino fundamental incompleto">
-                Ensino fundamental incompleto
-              </option>
-              <option value="Ensino fundamental completo">
-                Ensino fundamental completo
-              </option>
-              <option value="Ensino superior incompleto">
-                Ensino superior incompleto
-              </option>
-              <option value="Ensino superior completo">
-                Ensino superior completo
-              </option>
-            </SelectRegister>
+              <option
+                :value="index"
+                v-for="(index, desc) in escolaridade"
+                :key="desc"
+              >
+                {{ escolaridade[desc] }}
+              </option></SelectRegister
+            >
+
             <SelectRegister :icon="cursouIcon">
               <option value="null" default>
                 Selecione tipo de escola onde cursou
               </option>
-              <option value="Todo em escola(s) pública(s)">
-                Todo em escola(s) pública(s)
-              </option>
-              <option value="Todo em escola(s) priivada(s)">
-                Todo em escola(s) privada(s)
-              </option>
-              <option value="Maior parte em escola pública">
-                Maior parte em escola pública
-              </option>
-              <option value="Maior parte em escola privada">
-                Maior parte em escola privada
+              <option
+                :value="index"
+                v-for="(index, desc) in cursou"
+                :key="desc"
+              >
+                {{ cursou[desc] }}
               </option>
             </SelectRegister>
             <SelectRegister :icon="cursoInglesIcon">
@@ -115,6 +105,7 @@ export default defineComponent({
         "Ensino superior completo",
       ],
       escolaridadeIcon: "fas fa-graduation-cap",
+
       cursou: [
         "Todo em escola(s) pública(s)",
         "Todo em escola(s) priivada(s)",
