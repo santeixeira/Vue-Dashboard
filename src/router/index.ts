@@ -2,9 +2,11 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import DashBoard from "@/pages/DashBoard.vue";
 import Vagas from "@/pages/Vagas.vue";
 import Register from "@/pages/Register.vue";
+import ForgotPassword from "@/pages/ForgotPassword.vue";
 
 import Login from "@/pages/Auth/Login.vue";
-import ForgotPassword from "@/pages/Auth/ForgotPassword.vue";
+import FormForgot from "@/pages/Auth/FormForgot.vue";
+import MessageForgot from "@/pages/Misc/MessageForgot.vue"
 
 import Credentials from "@/pages/Register/Credentials.vue";
 import DevEmail from "@/pages/Register/DevEmail.vue";
@@ -34,8 +36,19 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: "/forgot-password",
-    name: "ForgotPassword",
     component: ForgotPassword,
+    children: [
+      {
+        path: "",
+        name: "FormForgot",
+        component: FormForgot
+      },
+      {
+        path: "/message",
+        name: "MessageForgot",
+        component: MessageForgot
+      }
+    ]
   },
   {
     path: "/register/email",

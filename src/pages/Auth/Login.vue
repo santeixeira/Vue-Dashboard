@@ -6,10 +6,7 @@
           <div class="title">Login</div>
           <form action="#">
             <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Digite o seu e-mail" required />
-              </div>
+              <TextRegister :icon="emailIcon" :placeholder="email" v-model="inputEmail"/>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
                 <input
@@ -24,7 +21,7 @@
                 >
               </div>
               <div class="button input-box">
-                <ButtonsRegister @click="avancarDashboard">Entrar</ButtonsRegister>
+                <ButtonsRegister @click="salvar">Entrar</ButtonsRegister>
               </div>
               <div class="text sign-up-text">
                 Não Possui uma Conta?
@@ -45,18 +42,23 @@ import { defineComponent } from "vue";
 import ListBox from "@/components/Listas/ListBox.vue";
 import ButtonsRegister from "@/components/Utils/ButtonsRegister.vue";
 import ILogin from "@/interface/ILogin"
+import TextRegister from "@/components/Utils/TextRegister.vue";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Login",
-  components: { ListBox, ButtonsRegister },
+  components: { ListBox, ButtonsRegister, TextRegister },
   data() {
     return {
-      login: [] as ILogin[]
+      login: [] as ILogin[],
+      email: "Digite o seu email",
+      emailIcon: "fas fa-user",
+      inputEmail: ""
     }
   },
   methods: {
-    avancarDashboard(){
-      this.$router.push({ name: "DashBoard"})
+    async salvar() {
+      alert(this.inputEmail)
+      await this.$router.push({ name: "DashBoard"})
     },
   }
 });

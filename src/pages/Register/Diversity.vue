@@ -11,46 +11,68 @@
                 necessitatibus labore excepturi corrupti.
               </strong>
             </span>
-            <TextRegister
-              :placeholder="naturalidade"
-              :icon="naturalidadeIcon"
-            />
-            <TextRegister :placeholder="pcd" :icon="pcdIcon" />
-            <SelectRegister :icon="generoIcon">
-              <option value="null" default>Selecione seu gênero</option>
-              <option value="Masculino">Masculino</option>
-              <option value="Feminino">Feminino</option>
-              <option value="Outro">Outro</option>
-            </SelectRegister>
+            <div class="is-flex is-justify-content-space-between">
+              <SelectRegister :icon="generoIcon">
+                <option
+                  v-for="naturalidades in naturalidade"
+                  :key="naturalidades.desc"
+                  :value="naturalidades.value"
+                >
+                  {{ naturalidades.desc }}
+                </option></SelectRegister
+              >
+              <SelectRegister :icon="generoIcon">
+                <option
+                  v-for="generos in genero"
+                  :key="generos.desc"
+                  :value="generos.value"
+                >
+                  {{ generos.desc }}
+                </option>
+              </SelectRegister>
+            </div>
             <div class="is-flex is-justify-content-space-between">
               <SelectRegister :icon="pronomeIcon">
-                <option value="null" default>Pronome adequado</option>
-                <option value="Masculino">Ele</option>
-                <option value="Feminino">Ela</option>
-                <option value="Outro">Outro</option>
+                <option
+                  v-for="pronomes in pronome"
+                  :key="pronomes.desc"
+                  :value="pronomes.value"
+                >
+                  {{ pronomes.desc }}
+                </option>
               </SelectRegister>
               <SelectRegister :icon="identidadeIcon">
-                <option value="null" default>Identidade de gênero</option>
-                <option value="Masculino">Ele</option>
-                <option value="Feminino">Ela</option>
-                <option value="Outro">Outro</option>
+                <option
+                  v-for="identidades in identidade"
+                  :key="identidades.desc"
+                  :value="identidades.value"
+                >
+                  {{ identidades.desc }}
+                </option>
               </SelectRegister>
             </div>
 
             <div class="is-flex is-justify-content-space-between">
               <SelectRegister :icon="orientacaoIcon">
-                <option value="null" default>Orientação sexual</option>
-                <option value="Masculino">Ele</option>
-                <option value="Feminino">Ela</option>
-                <option value="Outro">Outro</option>
+                <option
+                  v-for="orientacaoes in orientacaoSexual"
+                  :key="orientacaoes.desc"
+                  :value="orientacaoes.value"
+                >
+                  {{ orientacaoes.desc }}
+                </option>
               </SelectRegister>
               <SelectRegister :icon="etniaIcon">
-                <option value="null" default>Etnia</option>
-                <option value="Masculino">Ele</option>
-                <option value="Feminino">Ela</option>
-                <option value="Outro">Outro</option>
-              </SelectRegister>
+                <option
+                  v-for="etnias in etnia"
+                  :key="etnias.desc"
+                  :value="etnias.value"
+                >
+                  {{ etnias.desc }}
+                </option></SelectRegister
+              >
             </div>
+            <TextRegister :placeholder="pcd" :icon="pcdIcon" />
           </form>
         </div>
       </div>
@@ -70,6 +92,14 @@ import ListBox from "@/components/Listas/ListBox.vue";
 import ButtonsRegister from "@/components/Utils/ButtonsRegister.vue";
 import TextRegister from "@/components/Utils/TextRegister.vue";
 import SelectRegister from "@/components/Utils/SelectRegister.vue";
+import {
+  Genero,
+  Pronome,
+  IdentidadeGenero,
+  Etnia,
+  Naturalidade,
+  OrientacaoSexual
+} from "@/utils/index";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Diversity",
@@ -77,21 +107,24 @@ export default defineComponent({
     ListBox,
     ButtonsRegister,
     TextRegister,
-    SelectRegister,
+    SelectRegister
   },
   data() {
     return {
-      naturalidade: "Digite sua naturalidade",
-      naturalidadeIcon: "fas fa-flag",
-      pcd: "Dgite qual sua necessidade especial (caso PCD)",
+      pcd: "Digite qual sua necessidade especial (caso PCD)",
       pcdIcon: "fas fa-person-walking-with-cane",
-      genero: "Test",
       generoIcon: "fas fa-mars-and-venus",
       pronomeIcon: "fas fa-person-half-dress",
       identidadeIcon: "fas fa-star",
       orientacaoIcon: "fas fa-people-pulling",
       etniaIcon: "fas fa-people-group",
       btnAnterior: "anter",
+      genero: Genero,
+      pronome: Pronome,
+      identidade: IdentidadeGenero,
+      orientacaoSexual: OrientacaoSexual,
+      etnia: Etnia,
+      naturalidade: Naturalidade
     };
   },
   methods: {
@@ -100,8 +133,8 @@ export default defineComponent({
     },
     voltarPagina() {
       this.$router.push({ name: "Personal" });
-    },
-  },
+    }
+  }
 });
 </script>
 

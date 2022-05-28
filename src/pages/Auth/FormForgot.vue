@@ -1,7 +1,7 @@
 <template>
   <ListBox>
     <div class="title">Esqueci a senha</div>
-    <form action="#">
+    <form>
       <div class="input-boxes">
         <div class="text is-justify-content-center">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ipsam
@@ -9,10 +9,10 @@
         </div>
         <div class="input-box">
           <i class="fas fa-envelope"></i>
-          <input type="text" placeholder="Seu Email" required />
+          <input type="text" placeholder="Seu Email" v-model="form.email" @keyup.enter="forgotPassword" required />
         </div>
         <div class="button input-box">
-          <ButtonsRegister @click="concluir">Enviar</ButtonsRegister>
+          <ButtonsRegister @click="forgotPassword">Enviar</ButtonsRegister>
         </div>
       </div>
     </form>
@@ -23,12 +23,25 @@
 import { defineComponent } from "vue";
 import ListBox from "@/components/Listas/ListBox.vue";
 import ButtonsRegister from "@/components/Utils/ButtonsRegister.vue";
+import {client} from "@/http"
+interface Email {
+  email: string
+}
 export default defineComponent({
-  name: "ForgotPassword",
+  name: "FormForgot",
   components: { ListBox, ButtonsRegister },
+  data() {
+    return {
+      user: [] as Email[],
+      form: {
+        email: "",
+      }
+    }
+  },
   methods: {
-    concluir() {
-      this.$router.push({ name: "DevRegisterCarreira" });
+    forgotPassword() {
+      alert(this.form.email)
+      this.$router.push({ name: "MessageForgot" });
     },
     voltarPagina() {
       this.$router.push({ name: "DevRegisterCarreira" });

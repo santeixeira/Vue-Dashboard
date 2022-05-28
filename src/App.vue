@@ -15,6 +15,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import NavBar from "./components/Sidebar/NavBar.vue";
+import {client} from "@/http"
 
 export default defineComponent({
   name: "App",
@@ -31,6 +32,7 @@ export default defineComponent({
     altTheme(darkMode: boolean) {
       this.darkMode = darkMode;
     },
+    
   },
 });
 </script>

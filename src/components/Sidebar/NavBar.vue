@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="https://somosjobi.com.br">
           <img
-            src="https://somosjobi.com.br/wp-content/uploads/2022/03/Logo-Jobi-2.png"
+            src="@/assets/image/Logo-Jobi-2.png"
             class="jobi"
           />
         </a>
