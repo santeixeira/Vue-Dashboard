@@ -15,7 +15,7 @@
               <SelectRegister :icon="generoIcon">
                 <option
                   v-for="naturalidades in naturalidade"
-                  :key="naturalidades.desc"
+                  :key="naturalidades.id"
                   :value="naturalidades.value"
                 >
                   {{ naturalidades.desc }}
@@ -24,7 +24,7 @@
               <SelectRegister :icon="generoIcon">
                 <option
                   v-for="generos in genero"
-                  :key="generos.desc"
+                  :key="generos.id"
                   :value="generos.value"
                 >
                   {{ generos.desc }}
@@ -35,7 +35,7 @@
               <SelectRegister :icon="pronomeIcon">
                 <option
                   v-for="pronomes in pronome"
-                  :key="pronomes.desc"
+                  :key="pronomes.id"
                   :value="pronomes.value"
                 >
                   {{ pronomes.desc }}
@@ -44,7 +44,7 @@
               <SelectRegister :icon="identidadeIcon">
                 <option
                   v-for="identidades in identidade"
-                  :key="identidades.desc"
+                  :key="identidades.id"
                   :value="identidades.value"
                 >
                   {{ identidades.desc }}
@@ -56,7 +56,7 @@
               <SelectRegister :icon="orientacaoIcon">
                 <option
                   v-for="orientacaoes in orientacaoSexual"
-                  :key="orientacaoes.desc"
+                  :key="orientacaoes.id"
                   :value="orientacaoes.value"
                 >
                   {{ orientacaoes.desc }}
@@ -65,7 +65,7 @@
               <SelectRegister :icon="etniaIcon">
                 <option
                   v-for="etnias in etnia"
-                  :key="etnias.desc"
+                  :key="etnias.id"
                   :value="etnias.value"
                 >
                   {{ etnias.desc }}

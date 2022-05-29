@@ -12,6 +12,12 @@
       >
     </li>
     <li>
+      <input type="checkbox" id="datascience" value="datascience" /><label
+        for="datascience"
+        >Full Stack</label
+      >
+    </li>
+    <li>
       <input type="checkbox" id="mobile" value="mobile" /><label for="mobile"
         >Mobile</label
       >
@@ -54,7 +60,7 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped lang="scss">
+<style lang="scss" scoped>
 ul.ks-cboxtags li {
   display: inline;
 }

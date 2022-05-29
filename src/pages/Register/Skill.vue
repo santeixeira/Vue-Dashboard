@@ -10,7 +10,16 @@
             </strong>
           </span>
           <Stack />
-          <Tag :placeholder="skill" :icon="skillIcon" :options="skillArray" />
+          <SelectRegister
+            :icon="skillIcon">
+            <option
+            v-for="skill in skillArray"
+            :key="skill.id"
+            :value="skill.value"
+            >{{ skill.desc }}
+            </option>
+            </SelectRegister
+          >
           <SelectRegister :icon="inglesIcon">
             <option value="default" selected>
               Selecione o seu nível de inglês
@@ -51,6 +60,7 @@ import Tag from "@/components/Utils/Tag.vue";
 import Stack from "@/components/Utils/Stack.vue";
 import TextRegister from "@/components/Utils/TextRegister.vue";
 import SelectRegister from "@/components/Utils/SelectRegister.vue";
+import { Skills } from "@/utils/index";
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Skill",
@@ -64,34 +74,15 @@ export default defineComponent({
       skillIcon: "fas fa-code",
       inglesIcon: "fas fa-language",
       btnAnterior: "anter",
-      skillArray: [
-        "HTML e CSS",
-        "JavaScript",
-        "Java",
-        "SQL",
-        "Node.JS",
-        "Python",
-        "AWS",
-        "Git",
-        "C#",
-        "Angular.JS",
-        "React Native",
-        "Android",
-        "iOS",
-        "MySQL",
-        "Scrum",
-        "Linux",
-        "Excel",
-        "MongoDB",
-      ],
+      skillArray: Skills
     };
   },
   components: {
     ButtonsRegister,
-    Tag,
+    
     Stack,
     SelectRegister,
-    TextRegister,
+    TextRegister
   },
   methods: {
     avancarPagina() {
@@ -99,8 +90,8 @@ export default defineComponent({
     },
     voltarPagina() {
       this.$router.push({ name: "DevRegisterCarreira" });
-    },
-  },
+    }
+  }
 });
 </script>
 

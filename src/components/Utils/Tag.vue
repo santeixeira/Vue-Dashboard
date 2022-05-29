@@ -1,19 +1,20 @@
 <template>
   
   <div class="input-box">
-    <i v-bind:class="icon"></i>
+    <i :class="icon"></i>
     <Multiselect
       :v-model="value"
       mode="tags"
       :placeholder="placeholder"
       :options="options"
       :searchable="true"
-      :createTag="true"
+      :createTag="false"
     />
   </div>
 </template>
 
 <script lang="ts">
+import { Skills } from "@/utils/index";
 import Multiselect from "@vueform/multiselect";
 import { defineComponent } from "vue";
 export default defineComponent({
